@@ -117,7 +117,7 @@
         "siteFQDN" : "", 
         "moodleScriptLocation": "https://raw.githubusercontent.com/ftvello/MoodleAzure-M/master/Scripts/",
         "install_moodleScriptFileName": "install_moodle.sh",
-        "setup_moodleScriptFileName": "setup_moodle1.sh",
+        "setup_moodleScriptFileName": "setup_moodle.sh",
         "mariadbScriptLocation": "https://raw.githubusercontent.com/ftvello/MoodleAzure-M/master/Scripts/",
         "install_mariadbScriptFileName": "install_mariadb.sh",
         "nodeDBCount" : 2,
