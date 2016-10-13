@@ -1,621 +1,558 @@
-﻿13:26:29 - Build started.
-13:26:30 - Project "MoodleAzure_Cloud01_build2.deployproj" (StageArtifacts target(s)):
-13:26:30 - Project "MoodleAzure_Cloud01_build2.deployproj" (ContentFilesProjectOutputGroup target(s)):
-13:26:30 - Done building project "MoodleAzure_Cloud01_build2.deployproj".
-13:26:30 - Done building project "MoodleAzure_Cloud01_build2.deployproj".
-13:26:30 - Build succeeded.
-13:26:30 - The following parameter values will be used for this deployment:
-13:26:30 -     resourcesPrefix: azmooclus
-13:26:30 -     vmSize: Standard_DS1_v2
-13:26:30 -     moodleVersion: MOODLE_30_STABLE
-13:26:30 -     adminUsername: azureadmin
-13:26:30 -     adminPassword: <securestring>
-13:26:30 -     mySQLuserPassword: <securestring>
-13:26:30 -     mySQLrootPassword: <securestring>
-13:26:30 - Launching deployment PowerShell script with the following command:
-13:26:30 - 'c:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_build2\moodleazure-m\Scripts\Deploy-AzureResourceGroup.ps1' -StorageAccountName '' -ResourceGroupName 'cloud06' -ResourceGroupLocation 'brazilsouth' -TemplateFile 'c:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_build2\moodleazure-m\templates\linuxvirtualmachinescaleset.json' -TemplateParametersFile 'c:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_build2\moodleazure-m\templates\linuxvirtualmachinescaleset.parameters.json' -ArtifactStagingDirectory '..\bin\Debug\staging'
-13:26:42 - 
-13:26:42 - 
-13:26:42 - Environment           : AzureCloud
-13:26:42 - Account               : fabio.vello@itcore.com.br
-13:26:42 - TenantId              : f0ed7551-0c0d-456a-bd7d-c6ec5616b37b
-13:26:42 - SubscriptionId        : 40788d9e-7a91-44eb-95a2-c08261a4ff34
-13:26:42 - SubscriptionName      : Microsoft Azure Enterprise
-13:26:42 - CurrentStorageAccount : 
-13:26:42 - 
-13:26:44 - [VERBOSE] Realizando a operação "Replacing resource group ..." no destino "".
-13:26:45 - [VERBOSE] 13:26:45 - Created resource group 'cloud06' in location 'brazilsouth'
-13:26:45 - 
-13:26:45 - ResourceGroupName : cloud06
-13:26:45 - Location          : brazilsouth
-13:26:45 - ProvisioningState : Succeeded
-13:26:45 - Tags              : 
-13:26:45 - TagsTable         : 
-13:26:45 - ResourceId        : /subscriptions/40788d9e-7a91-44eb-95a2-c08261a4ff34/resourc
-13:26:45 -                     eGroups/cloud06
-13:26:45 - 
-13:26:45 - [VERBOSE] Realizando a operação "Creating Deployment" no destino "cloud06".
-13:26:47 - [VERBOSE] 13:26:47 - Template is valid.
-13:26:48 - [VERBOSE] 13:26:48 - Create template deployment 'linuxvirtualmachinescaleset-1012-1626'
-13:26:48 - [VERBOSE] 13:26:48 - Checking deployment status in 5 seconds
-13:26:53 - [VERBOSE] 13:26:53 - Resource Microsoft.Storage/storageAccounts 'azmooclussa1' provisioning status is running
-13:26:53 - [VERBOSE] 13:26:53 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa1' provisioning status is running
-13:26:53 - [VERBOSE] 13:26:53 - Resource Microsoft.Storage/storageAccounts 'azmooclussas75madrmnrupy' provisioning status is running
-13:26:53 - [VERBOSE] 13:26:53 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa2' provisioning status is running
-13:26:53 - [VERBOSE] 13:26:53 - Resource Microsoft.Storage/storageAccounts 'dbazmooclussa0' provisioning status is running
-13:26:53 - [VERBOSE] 13:26:53 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa3' provisioning status is running
-13:26:53 - [VERBOSE] 13:26:53 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa0' provisioning status is running
-13:26:53 - [VERBOSE] 13:26:53 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa4' provisioning status is running
-13:26:54 - [VERBOSE] 13:26:54 - Checking deployment status in 10 seconds
-13:27:04 - [VERBOSE] 13:27:04 - Resource Microsoft.Storage/storageAccounts 'azmooclussa0' provisioning status is running
-13:27:04 - [VERBOSE] 13:27:04 - Resource Microsoft.Network/publicIPAddresses 'jb-azmooclus' provisioning status is running
-13:27:04 - [VERBOSE] 13:27:04 - Resource Microsoft.Storage/storageAccounts 'dbazmooclussa1' provisioning status is running
-13:27:04 - [VERBOSE] 13:27:04 - Resource Microsoft.Network/networkSecurityGroups 'jboxNsg' provisioning status is running
-13:27:04 - [VERBOSE] 13:27:04 - Resource Microsoft.Network/publicIPAddresses 'webpip' provisioning status is running
-13:27:04 - [VERBOSE] 13:27:04 - Resource Microsoft.Network/virtualNetworks 'azmooclusvnet' provisioning status is running
-13:27:04 - [VERBOSE] 13:27:04 - Resource Microsoft.Compute/availabilitySets 'dbAvSet' provisioning status is succeeded
-13:27:04 - [VERBOSE] 13:27:04 - Resource Microsoft.Compute/availabilitySets 'GfsAvSet' provisioning status is succeeded
-13:27:04 - [VERBOSE] 13:27:04 - Checking deployment status in 15 seconds
-13:27:19 - [VERBOSE] 13:27:19 - Resource Microsoft.Network/networkInterfaces 'gfsnic1' provisioning status is succeeded
-13:27:19 - [VERBOSE] 13:27:19 - Resource Microsoft.Network/loadBalancers 'mariadblb' provisioning status is succeeded
-13:27:19 - [VERBOSE] 13:27:19 - Resource Microsoft.Network/networkInterfaces 'gfsnic0' provisioning status is succeeded
-13:27:19 - [VERBOSE] 13:27:19 - Resource Microsoft.Network/loadBalancers 'lbWeb' provisioning status is succeeded
-13:27:19 - [VERBOSE] 13:27:19 - Resource Microsoft.Network/publicIPAddresses 'webpip' provisioning status is succeeded
-13:27:19 - [VERBOSE] 13:27:19 - Resource Microsoft.Network/publicIPAddresses 'jb-azmooclus' provisioning status is succeeded
-13:27:19 - [VERBOSE] 13:27:19 - Resource Microsoft.Network/networkSecurityGroups 'jboxNsg' provisioning status is succeeded
-13:27:19 - [VERBOSE] 13:27:19 - Resource Microsoft.Network/publicIPAddresses 'webpip' provisioning status is succeeded
-13:27:19 - [VERBOSE] 13:27:19 - Resource Microsoft.Network/virtualNetworks 'azmooclusvnet' provisioning status is succeeded
-13:27:19 - [VERBOSE] 13:27:19 - Resource Microsoft.Storage/storageAccounts 'azmooclussa1' provisioning status is succeeded
-13:27:19 - [VERBOSE] 13:27:19 - Resource Microsoft.Storage/storageAccounts 'azmooclussas75madrmnrupy' provisioning status is succeeded
-13:27:19 - [VERBOSE] 13:27:19 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa3' provisioning status is succeeded
-13:27:19 - [VERBOSE] 13:27:19 - Checking deployment status in 20 seconds
-13:27:40 - [VERBOSE] 13:27:39 - Resource Microsoft.Compute/virtualMachines 'dbazmooclusvm1' provisioning status is running
-13:27:40 - [VERBOSE] 13:27:40 - Resource Microsoft.Compute/virtualMachines 'gfsazmooclusvm1' provisioning status is running
-13:27:40 - [VERBOSE] 13:27:40 - Resource Microsoft.Compute/virtualMachines 'dbazmooclusvm0' provisioning status is running
-13:27:40 - [VERBOSE] 13:27:40 - Resource Microsoft.Compute/virtualMachines 'gfsazmooclusvm0' provisioning status is running
-13:27:40 - [VERBOSE] 13:27:40 - Resource Microsoft.Network/networkInterfaces 'jboxnic' provisioning status is succeeded
-13:27:40 - [VERBOSE] 13:27:40 - Resource Microsoft.Network/networkInterfaces 'dbnic1' provisioning status is succeeded
-13:27:40 - [VERBOSE] 13:27:40 - Resource Microsoft.Network/networkInterfaces 'dbnic0' provisioning status is succeeded
-13:27:40 - [VERBOSE] 13:27:40 - Resource Microsoft.Storage/storageAccounts 'azmooclussas75madrmnrupy' provisioning status is succeeded
-13:27:40 - [VERBOSE] 13:27:40 - Resource Microsoft.Storage/storageAccounts 'azmooclussa0' provisioning status is succeeded
-13:27:40 - [VERBOSE] 13:27:40 - Resource Microsoft.Storage/storageAccounts 'dbazmooclussa1' provisioning status is succeeded
-13:27:40 - [VERBOSE] 13:27:40 - Resource Microsoft.Storage/storageAccounts 'dbazmooclussa0' provisioning status is succeeded
-13:27:40 - [VERBOSE] 13:27:40 - Checking deployment status in 25 seconds
-13:28:05 - [VERBOSE] 13:28:05 - Checking deployment status in 30 seconds
-13:28:35 - [VERBOSE] 13:28:35 - Checking deployment status in 35 seconds
-13:29:10 - [VERBOSE] 13:29:10 - Resource Microsoft.Compute/virtualMachines 'dbazmooclusvm1' provisioning status is succeeded
-13:29:10 - [VERBOSE] 13:29:10 - Resource Microsoft.Compute/virtualMachines 'gfsazmooclusvm1' provisioning status is succeeded
-13:29:10 - [VERBOSE] 13:29:10 - Resource Microsoft.Compute/virtualMachines 'dbazmooclusvm0' provisioning status is succeeded
-13:29:10 - [VERBOSE] 13:29:10 - Checking deployment status in 40 seconds
-13:29:50 - [VERBOSE] 13:29:50 - Resource Microsoft.Compute/virtualMachines/extensions 'gfsazmooclusvm0/setupGluster' provisioning status is running
-13:29:50 - [VERBOSE] 13:29:50 - Resource Microsoft.Compute/virtualMachines/extensions 'gfsazmooclusvm1/setupGluster' provisioning status is running
-13:29:50 - [VERBOSE] 13:29:50 - Resource Microsoft.Compute/virtualMachines/extensions 'dbazmooclusvm1/install_mariadb' provisioning status is running
-13:29:50 - [VERBOSE] 13:29:50 - Resource Microsoft.Compute/virtualMachines/extensions 'dbazmooclusvm0/install_mariadb' provisioning status is running
-13:29:50 - [VERBOSE] 13:29:50 - Resource Microsoft.Compute/virtualMachines 'gfsazmooclusvm0' provisioning status is succeeded
-13:29:50 - [VERBOSE] 13:29:50 - Checking deployment status in 45 seconds
-13:30:36 - [VERBOSE] 13:30:36 - Checking deployment status in 50 seconds
-13:31:26 - [VERBOSE] 13:31:26 - Resource Microsoft.Compute/virtualMachines/extensions 'dbazmooclusvm1/install_mariadb' provisioning status is succeeded
-13:31:26 - [VERBOSE] 13:31:26 - Resource Microsoft.Compute/virtualMachines/extensions 'dbazmooclusvm0/install_mariadb' provisioning status is succeeded
-13:31:26 - [VERBOSE] 13:31:26 - Checking deployment status in 55 seconds
-13:32:21 - [VERBOSE] 13:32:21 - Resource Microsoft.Compute/virtualMachines 'jboxazmooclusvm' provisioning status is running
-13:32:21 - [VERBOSE] 13:32:21 - Resource Microsoft.Compute/virtualMachines/extensions 'gfsazmooclusvm0/setupGluster' provisioning status is succeeded
-13:32:21 - [VERBOSE] 13:32:21 - Checking deployment status in 60 seconds
-13:33:21 - [VERBOSE] 13:33:21 - Checking deployment status in 60 seconds
-13:34:22 - [VERBOSE] 13:34:22 - Resource Microsoft.Compute/virtualMachines/extensions 'jboxazmooclusvm/install_moodle' provisioning status is running
-13:34:22 - [VERBOSE] 13:34:22 - Resource Microsoft.Compute/virtualMachines 'jboxazmooclusvm' provisioning status is succeeded
-13:34:22 - [VERBOSE] 13:34:22 - Checking deployment status in 60 seconds
-13:35:23 - [VERBOSE] 13:35:23 - Checking deployment status in 60 seconds
-13:36:23 - [VERBOSE] 13:36:23 - Resource Microsoft.Compute/virtualMachines/extensions 'jboxazmooclusvm/install_moodle' provisioning status is succeeded
-13:36:24 - [VERBOSE] 13:36:24 - Checking deployment status in 60 seconds
-13:37:24 - [VERBOSE] 13:37:24 - Checking deployment status in 60 seconds
-13:38:25 - [ERROR] New-AzureRmResourceGroupDeployment : 13:38:24 - Resource 
-13:38:25 - [ERROR] Microsoft.Compute/virtualMachines/extensions 'gfsazmooclusvm1/setupGluster' 
-13:38:25 - [ERROR] failed with message '{
-13:38:25 - [ERROR]   "status": "Failed",
-13:38:25 - [ERROR]   "error": {
-13:38:25 - [ERROR]     "code": "ResourceDeploymentFailure",
-13:38:25 - [ERROR]     "message": "The resource operation completed with terminal provisioning 
-13:38:25 - [ERROR] state 'Failed'.",
-13:38:25 - [ERROR]     "details": [
-13:38:25 - [ERROR]       {
-13:38:25 - [ERROR]         "code": "VMExtensionProvisioningError",
-13:38:25 - [ERROR]         "message": "VM has reported a failure when processing extension 
-13:38:25 - [ERROR] 'setupGluster'. Error message: \"Script returned an 
-13:38:25 - [ERROR] error.\n---stdout---\nnparse for package: 
-13:38:25 - [ERROR] glusterfs-libs-3.7.1-16.0.1.el7.centos.x86_64\n--> Running transaction 
-13:38:25 - [ERROR] check\n---> Package rsyslog-mmjsonparse.x86_64 0:7.4.7-12.el7 will be 
-13:38:25 - [ERROR] installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n=====
-13:38:25 - [ERROR] ===========================================================================\n 
-13:38:25 - [ERROR] Package                    Arch     Version                    Repository\n    
-13:38:25 - [ERROR]                                                                        Size\n==
-13:38:25 - [ERROR] ==============================================================================\
-13:38:25 - [ERROR] nInstalling:\n glusterfs                  x86_64   3.7.1-16.0.1.el7.centos    
-13:38:25 - [ERROR] updates   422 k\n glusterfs-cli              x86_64   3.7.1-16.0.1.el7.centos  
-13:38:25 - [ERROR]   updates   153 k\n glusterfs-fuse             x86_64   
-13:38:25 - [ERROR] 3.7.1-16.0.1.el7.centos    updates   107 k\nInstalling for dependencies:\n 
-13:38:25 - [ERROR] glusterfs-client-xlators   x86_64   3.7.1-16.0.1.el7.centos    updates   732 
-13:38:25 - [ERROR] k\n glusterfs-libs             x86_64   3.7.1-16.0.1.el7.centos    updates   
-13:38:25 - [ERROR] 322 k\n rsyslog-mmjsonparse        x86_64   7.4.7-12.el7               base    
-13:38:25 - [ERROR]    29 k\n\nTransaction Summary\n===============================================
-13:38:25 - [ERROR] =================================\nInstall  3 Packages (+3 Dependent 
-13:38:25 - [ERROR] packages)\n\nTotal download size: 1.7 M\nInstalled size: 6.6 M\nDownloading pac
-13:38:25 - [ERROR] kages:\n-----------------------------------------------------------------------
-13:38:25 - [ERROR] ---------\nTotal                                              2.0 MB/s | 1.7 
-13:38:25 - [ERROR] MB  00:00     \nRunning transaction check\nRunning transaction 
-13:38:25 - [ERROR] test\nTransaction test succeeded\nRunning transaction\n  Installing : 
-13:38:25 - [ERROR] rsyslog-mmjsonparse-7.4.7-12.el7.x86_64                      1/6 \n  
-13:38:25 - [ERROR] Installing : glusterfs-libs-3.7.1-16.0.1.el7.centos.x86_64                2/6 
-13:38:25 - [ERROR] \n  Installing : glusterfs-3.7.1-16.0.1.el7.centos.x86_64                     
-13:38:25 - [ERROR] 3/6 \n  Installing : glusterfs-client-xlators-3.7.1-16.0.1.el7.centos.x86_64   
-13:38:25 - [ERROR]    4/6 \n  Installing : glusterfs-fuse-3.7.1-16.0.1.el7.centos.x86_64          
-13:38:25 - [ERROR]       5/6 \n  Installing : glusterfs-cli-3.7.1-16.0.1.el7.centos.x86_64        
-13:38:25 - [ERROR]          6/6 \n  Verifying  : glusterfs-3.7.1-16.0.1.el7.centos.x86_64         
-13:38:25 - [ERROR]             1/6 \n  Verifying  : rsyslog-mmjsonparse-7.4.7-12.el7.x86_64       
-13:38:25 - [ERROR]                2/6 \n  Verifying  : 
-13:38:25 - [ERROR] glusterfs-cli-3.7.1-16.0.1.el7.centos.x86_64                 3/6 \n  Verifying 
-13:38:25 - [ERROR]  : glusterfs-client-xlators-3.7.1-16.0.1.el7.centos.x86_64      4/6 \n  
-13:38:25 - [ERROR] Verifying  : glusterfs-libs-3.7.1-16.0.1.el7.centos.x86_64                5/6 
-13:38:25 - [ERROR] \n  Verifying  : glusterfs-fuse-3.7.1-16.0.1.el7.centos.x86_64                
-13:38:25 - [ERROR] 6/6 \n\nInstalled:\n  glusterfs.x86_64 0:3.7.1-16.0.1.el7.centos               
-13:38:25 - [ERROR]                      \n  glusterfs-cli.x86_64 0:3.7.1-16.0.1.el7.centos        
-13:38:25 - [ERROR]                         \n  glusterfs-fuse.x86_64 0:3.7.1-16.0.1.el7.centos    
-13:38:25 - [ERROR]                            \n\nDependency Installed:\n  
-13:38:25 - [ERROR] glusterfs-client-xlators.x86_64 0:3.7.1-16.0.1.el7.centos                     
-13:38:25 - [ERROR] \n  glusterfs-libs.x86_64 0:3.7.1-16.0.1.el7.centos                            
-13:38:25 - [ERROR]    \n  rsyslog-mmjsonparse.x86_64 0:7.4.7-12.el7                               
-13:38:25 - [ERROR]       \n\nComplete!\ngluster peer probe gfsazmooclusvm0 failed\ngluster peer 
-13:38:25 - [ERROR] status gfsazmooclusvm0 failed\ngluster peer probe gfsazmooclusvm0 
-13:38:25 - [ERROR] failed\ngluster peer status gfsazmooclusvm0 failed\ngluster peer probe 
-13:38:25 - [ERROR] gfsazmooclusvm0 failed\ngluster peer status gfsazmooclusvm0 failed\ngluster 
-13:38:25 - [ERROR] peer probe gfsazmooclusvm0 failed\ngluster peer status gfsazmooclusvm0 
-13:38:25 - [ERROR] failed\ngluster peer probe gfsazmooclusvm0 failed\ngluster peer status 
-13:38:25 - [ERROR] gfsazmooclusvm0 failed\ngluster peer probe gfsazmooclusvm0 failed\ngluster 
-13:38:25 - [ERROR] peer status gfsazmooclusvm0 failed\ngluster peer probe gfsazmooclusvm0 
-13:38:26 - [ERROR] failed\ngluster peer status gfsazmooclusvm0 failed\ngluster peer probe 
-13:38:26 - [ERROR] gfsazmooclusvm0 failed\ngluster peer status gfsazmooclusvm0 failed\ngluster 
-13:38:26 - [ERROR] peer probe gfsazmooclusvm0 failed\ngluster peer status gfsazmooclusvm0 
-13:38:26 - [ERROR] failed\ngluster peer probe gfsazmooclusvm0 failed\ngluster peer status 
-13:38:26 - [ERROR] gfsazmooclusvm0 failed\nConnection failed. Please check if gluster daemon is 
-13:38:26 - [ERROR] operational.\nConnection failed. Please check if gluster daemon is 
-13:38:26 - [ERROR] operational.\nConnection failed. Please check if gluster daemon is 
-13:38:26 - [ERROR] operational.\n\n---errout---\n(epel)\n           Requires: 
-13:38:26 - [ERROR] libyajl.so.1()(64bit)\nError: Package: 2:ntfsprogs-2016.2.22-1.el6.x86_64 
-13:38:26 - [ERROR] (epel)\n           Requires: libgnutls.so.26(GNUTLS_1_4)(64bit)\nError: 
-13:38:26 - [ERROR] WALinuxAgent conflicts with 1:NetworkManager-1.0.6-31.el7_2.x86_64\nError: 
-13:38:26 - [ERROR] Package: gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)\n           Requires: 
-13:38:26 - [ERROR] libnettle.so.4()(64bit)\n           Removing: nettle-2.7.1-4.el7.x86_64 
-13:38:26 - [ERROR] (@anaconda)\n               libnettle.so.4()(64bit)\n           Updated By: 
-13:38:26 - [ERROR] nettle-3.2-2.el6.x86_64 (epel)\n              ~libnettle.so.6()(64bit)\nError: 
-13:38:26 - [ERROR] Package: gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)\n           Requires: 
-13:38:26 - [ERROR] libhogweed.so.2()(64bit)\n           Removing: nettle-2.7.1-4.el7.x86_64 
-13:38:26 - [ERROR] (@anaconda)\n               libhogweed.so.2()(64bit)\n           Updated By: 
-13:38:26 - [ERROR] nettle-3.2-2.el6.x86_64 (epel)\n              
-13:38:26 - [ERROR] ~libhogweed.so.4()(64bit)\n--2016-10-12 16:30:43--  http://download.gluster.org
-13:38:26 - [ERROR] /pub/gluster/glusterfs/LATEST/EPEL.repo/glusterfs-epel.repo\nResolving 
-13:38:26 - [ERROR] download.gluster.org (download.gluster.org)... 23.253.208.221, 
-13:38:26 - [ERROR] 2001:4801:7824:104:be76:4eff:fe10:23d8\nConnecting to download.gluster.org 
-13:38:26 - [ERROR] (download.gluster.org)|23.253.208.221|:80... connected.\nHTTP request sent, 
-13:38:26 - [ERROR] awaiting response... 404 Not Found\n2016-10-12 16:30:44 ERROR 404: Not 
-13:38:26 - [ERROR] Found.\n\nmv: cannot stat glusterfs-epel.repo: No such file or 
-13:38:26 - [ERROR] directory\nError: Package: nettle-3.2-2.el6.x86_64 (epel)\n           
-13:38:26 - [ERROR] Requires: libgmp.so.3()(64bit)\nError: Package: 
-13:38:26 - [ERROR] libstoragemgmt-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
-13:38:26 - [ERROR] libudev.so.0()(64bit)\nError: Package: 
-13:38:26 - [ERROR] libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
-13:38:26 - [ERROR] python(abi) = 2.6\n           Removing: python-2.7.5-34.el7.x86_64 
-13:38:26 - [ERROR] (@anaconda)\n               python(abi) = 2.7\n               python(abi) = 
-13:38:26 - [ERROR] 2.7\n           Updated By: python-2.7.5-39.el7_2.x86_64 (updates)\n           
-13:38:26 - [ERROR]     python(abi) = 2.7\n               python(abi) = 2.7\n           Available: 
-13:38:26 - [ERROR] python-2.7.5-38.el7_2.x86_64 (updates)\n               python(abi) = 2.7\n     
-13:38:26 - [ERROR]           python(abi) = 2.7\nError: Package: libstoragemgmt-1.3.2-1.el6.x86_64 
-13:38:26 - [ERROR] (epel)\n           Requires: libyajl.so.1()(64bit)\nError: Package: 
-13:38:26 - [ERROR] 2:ntfsprogs-2016.2.22-1.el6.x86_64 (epel)\n           Requires: 
-13:38:26 - [ERROR] libgnutls.so.26()(64bit)\nError: Package: libstoragemgmt-1.3.2-1.el6.x86_64 
-13:38:26 - [ERROR] (epel)\n           Requires: libconfig.so.8()(64bit)\nError: Package: 
-13:38:26 - [ERROR] libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
-13:38:26 - [ERROR] libpython2.6.so.1.0()(64bit)\nError: Package: 
-13:38:26 - [ERROR] libstoragemgmt-python-1.3.2-1.el6.noarch (epel)\n           Requires: 
-13:38:26 - [ERROR] python(abi) = 2.6\n           Removing: python-2.7.5-34.el7.x86_64 
-13:38:26 - [ERROR] (@anaconda)\n               python(abi) = 2.7\n               python(abi) = 
-13:38:26 - [ERROR] 2.7\n           Updated By: python-2.7.5-39.el7_2.x86_64 (updates)\n           
-13:38:27 - [ERROR]     python(abi) = 2.7\n               python(abi) = 2.7\n           Available: 
-13:38:27 - [ERROR] python-2.7.5-38.el7_2.x86_64 (updates)\n               python(abi) = 2.7\n     
-13:38:27 - [ERROR]           python(abi) = 2.7\nError: Package: 
-13:38:27 - [ERROR] libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
-13:38:27 - [ERROR] libudev.so.0()(64bit)\nError: Package: 
-13:38:27 - [ERROR] libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
-13:38:27 - [ERROR] libyajl.so.1()(64bit)\nError: Package: 2:ntfsprogs-2016.2.22-1.el6.x86_64 
-13:38:27 - [ERROR] (epel)\n           Requires: libgnutls.so.26(GNUTLS_1_4)(64bit)\nError: 
-13:38:27 - [ERROR] WALinuxAgent conflicts with 1:NetworkManager-1.0.6-31.el7_2.x86_64\nError: 
-13:38:27 - [ERROR] Package: gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)\n           Requires: 
-13:38:27 - [ERROR] libnettle.so.4()(64bit)\n           Removing: nettle-2.7.1-4.el7.x86_64 
-13:38:27 - [ERROR] (@anaconda)\n               libnettle.so.4()(64bit)\n           Updated By: 
-13:38:27 - [ERROR] nettle-3.2-2.el6.x86_64 (epel)\n              ~libnettle.so.6()(64bit)\nError: 
-13:38:27 - [ERROR] Package: gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)\n           Requires: 
-13:38:27 - [ERROR] libhogweed.so.2()(64bit)\n           Removing: nettle-2.7.1-4.el7.x86_64 
-13:38:27 - [ERROR] (@anaconda)\n               libhogweed.so.2()(64bit)\n           Updated By: 
-13:38:27 - [ERROR] nettle-3.2-2.el6.x86_64 (epel)\n              
-13:38:27 - [ERROR] ~libhogweed.so.4()(64bit)\nWarning: RPMDB altered outside of 
-13:38:27 - [ERROR] yum.\nazuregfs.sh: line 268: /etc/init.d/glusterd: No such file or 
-13:38:27 - [ERROR] directory\nls: cannot access /datadrive/brick: No such file or 
-13:38:27 - [ERROR] directory\n\n\"."
-13:38:27 - [ERROR]       }
-13:38:27 - [ERROR]     ]
-13:38:27 - [ERROR]   }
-13:38:27 - [ERROR] }'
-13:38:27 - [ERROR] No C:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_bui
-13:38:27 - [ERROR] ld2\moodleazure-m\Scripts\Deploy-AzureResourceGroup.ps1:98 caractere:1
-13:38:27 - [ERROR] + New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFil ...
-13:38:27 - [ERROR] + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-13:38:27 - [ERROR]     + CategoryInfo          : NotSpecified: (:) [New-AzureRmResourceGroupDeplo 
-13:38:27 - [ERROR]    yment], Exception
-13:38:27 - [ERROR]     + FullyQualifiedErrorId : Microsoft.Azure.Commands.ResourceManager.Cmdlets 
-13:38:27 - [ERROR]    .Implementation.NewAzureResourceGroupDeploymentCmdlet
-13:38:27 - [ERROR]  
-13:38:28 - [ERROR] New-AzureRmResourceGroupDeployment : 13:38:28 - VM has reported a failure when 
-13:38:28 - [ERROR] processing extension 'setupGluster'. Error message: "Script returned an error.
-13:38:28 - [ERROR] ---stdout---
-13:38:28 - [ERROR] nparse for package: glusterfs-libs-3.7.1-16.0.1.el7.centos.x86_64
-13:38:28 - [ERROR] --> Running transaction check
-13:38:28 - [ERROR] ---> Package rsyslog-mmjsonparse.x86_64 0:7.4.7-12.el7 will be installed
-13:38:28 - [ERROR] --> Finished Dependency Resolution
-13:38:28 - [ERROR] 
-13:38:28 - [ERROR] Dependencies Resolved
-13:38:28 - [ERROR] 
-13:38:28 - [ERROR] ===============================================================================
-13:38:28 - [ERROR] =
-13:38:28 - [ERROR]  Package                    Arch     Version                    Repository
-13:38:28 - [ERROR]                                                                            Size
-13:38:28 - [ERROR] ===============================================================================
-13:38:28 - [ERROR] =
-13:38:28 - [ERROR] Installing:
-13:38:28 - [ERROR]  glusterfs                  x86_64   3.7.1-16.0.1.el7.centos    updates   422 k
-13:38:28 - [ERROR]  glusterfs-cli              x86_64   3.7.1-16.0.1.el7.centos    updates   153 k
-13:38:28 - [ERROR]  glusterfs-fuse             x86_64   3.7.1-16.0.1.el7.centos    updates   107 k
-13:38:28 - [ERROR] Installing for dependencies:
-13:38:28 - [ERROR]  glusterfs-client-xlators   x86_64   3.7.1-16.0.1.el7.centos    updates   732 k
-13:38:28 - [ERROR]  glusterfs-libs             x86_64   3.7.1-16.0.1.el7.centos    updates   322 k
-13:38:28 - [ERROR]  rsyslog-mmjsonparse        x86_64   7.4.7-12.el7               base       29 k
-13:38:28 - [ERROR] 
-13:38:28 - [ERROR] Transaction Summary
-13:38:28 - [ERROR] ===============================================================================
-13:38:28 - [ERROR] =
-13:38:28 - [ERROR] Install  3 Packages (+3 Dependent packages)
-13:38:28 - [ERROR] 
-13:38:28 - [ERROR] Total download size: 1.7 M
-13:38:28 - [ERROR] Installed size: 6.6 M
-13:38:28 - [ERROR] Downloading packages:
-13:38:28 - [ERROR] -------------------------------------------------------------------------------
-13:38:28 - [ERROR] -
-13:38:28 - [ERROR] Total                                              2.0 MB/s | 1.7 MB  00:00    
-13:38:28 - [ERROR]  
-13:38:28 - [ERROR] Running transaction check
-13:38:28 - [ERROR] Running transaction test
-13:38:28 - [ERROR] Transaction test succeeded
-13:38:28 - [ERROR] Running transaction
-13:38:28 - [ERROR]   Installing : rsyslog-mmjsonparse-7.4.7-12.el7.x86_64                      
-13:38:28 - [ERROR] 1/6 
-13:38:28 - [ERROR]   Installing : glusterfs-libs-3.7.1-16.0.1.el7.centos.x86_64                
-13:38:28 - [ERROR] 2/6 
-13:38:28 - [ERROR]   Installing : glusterfs-3.7.1-16.0.1.el7.centos.x86_64                     
-13:38:28 - [ERROR] 3/6 
-13:38:28 - [ERROR]   Installing : glusterfs-client-xlators-3.7.1-16.0.1.el7.centos.x86_64      
-13:38:28 - [ERROR] 4/6 
-13:38:28 - [ERROR]   Installing : glusterfs-fuse-3.7.1-16.0.1.el7.centos.x86_64                
-13:38:28 - [ERROR] 5/6 
-13:38:28 - [ERROR]   Installing : glusterfs-cli-3.7.1-16.0.1.el7.centos.x86_64                 
-13:38:28 - [ERROR] 6/6 
-13:38:28 - [ERROR]   Verifying  : glusterfs-3.7.1-16.0.1.el7.centos.x86_64                     
-13:38:28 - [ERROR] 1/6 
-13:38:28 - [ERROR]   Verifying  : rsyslog-mmjsonparse-7.4.7-12.el7.x86_64                      
-13:38:28 - [ERROR] 2/6 
-13:38:28 - [ERROR]   Verifying  : glusterfs-cli-3.7.1-16.0.1.el7.centos.x86_64                 
-13:38:28 - [ERROR] 3/6 
-13:38:28 - [ERROR]   Verifying  : glusterfs-client-xlators-3.7.1-16.0.1.el7.centos.x86_64      
-13:38:28 - [ERROR] 4/6 
-13:38:28 - [ERROR]   Verifying  : glusterfs-libs-3.7.1-16.0.1.el7.centos.x86_64                
-13:38:28 - [ERROR] 5/6 
-13:38:28 - [ERROR]   Verifying  : glusterfs-fuse-3.7.1-16.0.1.el7.centos.x86_64                
-13:38:29 - [ERROR] 6/6 
-13:38:29 - [ERROR] 
-13:38:29 - [ERROR] Installed:
-13:38:29 - [ERROR]   glusterfs.x86_64 0:3.7.1-16.0.1.el7.centos                                   
-13:38:29 - [ERROR]  
-13:38:29 - [ERROR]   glusterfs-cli.x86_64 0:3.7.1-16.0.1.el7.centos                               
-13:38:29 - [ERROR]  
-13:38:29 - [ERROR]   glusterfs-fuse.x86_64 0:3.7.1-16.0.1.el7.centos                              
-13:38:29 - [ERROR]  
-13:38:29 - [ERROR] 
-13:38:29 - [ERROR] Dependency Installed:
-13:38:29 - [ERROR]   glusterfs-client-xlators.x86_64 0:3.7.1-16.0.1.el7.centos                    
-13:38:29 - [ERROR]  
-13:38:29 - [ERROR]   glusterfs-libs.x86_64 0:3.7.1-16.0.1.el7.centos                              
-13:38:29 - [ERROR]  
-13:38:29 - [ERROR]   rsyslog-mmjsonparse.x86_64 0:7.4.7-12.el7                                    
-13:38:29 - [ERROR]  
-13:38:29 - [ERROR] 
-13:38:29 - [ERROR] Complete!
-13:38:29 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer status gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer status gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer status gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer status gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer status gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer status gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer status gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer status gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer status gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
-13:38:29 - [ERROR] gluster peer status gfsazmooclusvm0 failed
-13:38:29 - [ERROR] Connection failed. Please check if gluster daemon is operational.
-13:38:29 - [ERROR] Connection failed. Please check if gluster daemon is operational.
-13:38:29 - [ERROR] Connection failed. Please check if gluster daemon is operational.
-13:38:29 - [ERROR] 
-13:38:29 - [ERROR] ---errout---
-13:38:29 - [ERROR] (epel)
-13:38:29 - [ERROR]            Requires: libyajl.so.1()(64bit)
-13:38:29 - [ERROR] Error: Package: 2:ntfsprogs-2016.2.22-1.el6.x86_64 (epel)
-13:38:29 - [ERROR]            Requires: libgnutls.so.26(GNUTLS_1_4)(64bit)
-13:38:29 - [ERROR] Error: WALinuxAgent conflicts with 1:NetworkManager-1.0.6-31.el7_2.x86_64
-13:38:29 - [ERROR] Error: Package: gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)
-13:38:29 - [ERROR]            Requires: libnettle.so.4()(64bit)
-13:38:29 - [ERROR]            Removing: nettle-2.7.1-4.el7.x86_64 (@anaconda)
-13:38:29 - [ERROR]                libnettle.so.4()(64bit)
-13:38:29 - [ERROR]            Updated By: nettle-3.2-2.el6.x86_64 (epel)
-13:38:29 - [ERROR]               ~libnettle.so.6()(64bit)
-13:38:29 - [ERROR] Error: Package: gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)
-13:38:29 - [ERROR]            Requires: libhogweed.so.2()(64bit)
-13:38:29 - [ERROR]            Removing: nettle-2.7.1-4.el7.x86_64 (@anaconda)
-13:38:29 - [ERROR]                libhogweed.so.2()(64bit)
-13:38:29 - [ERROR]            Updated By: nettle-3.2-2.el6.x86_64 (epel)
-13:38:29 - [ERROR]               ~libhogweed.so.4()(64bit)
-13:38:29 - [ERROR] --2016-10-12 16:30:43--  http://download.gluster.org/pub/gluster/glusterfs/LATE
-13:38:29 - [ERROR] ST/EPEL.repo/glusterfs-epel.repo
-13:38:29 - [ERROR] Resolving download.gluster.org (download.gluster.org)... 23.253.208.221, 
-13:38:29 - [ERROR] 2001:4801:7824:104:be76:4eff:fe10:23d8
-13:38:29 - [ERROR] Connecting to download.gluster.org 
-13:38:29 - [ERROR] (download.gluster.org)|23.253.208.221|:80... connected.
-13:38:29 - [ERROR] HTTP request sent, awaiting response... 404 Not Found
-13:38:29 - [ERROR] 2016-10-12 16:30:44 ERROR 404: Not Found.
-13:38:29 - [ERROR] 
-13:38:29 - [ERROR] mv: cannot stat glusterfs-epel.repo: No such file or directory
-13:38:29 - [ERROR] Error: Package: nettle-3.2-2.el6.x86_64 (epel)
-13:38:29 - [ERROR]            Requires: libgmp.so.3()(64bit)
-13:38:29 - [ERROR] Error: Package: libstoragemgmt-1.3.2-1.el6.x86_64 (epel)
-13:38:30 - [ERROR]            Requires: libudev.so.0()(64bit)
-13:38:30 - [ERROR] Error: Package: libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)
-13:38:30 - [ERROR]            Requires: python(abi) = 2.6
-13:38:30 - [ERROR]            Removing: python-2.7.5-34.el7.x86_64 (@anaconda)
-13:38:30 - [ERROR]                python(abi) = 2.7
-13:38:30 - [ERROR]                python(abi) = 2.7
-13:38:30 - [ERROR]            Updated By: python-2.7.5-39.el7_2.x86_64 (updates)
-13:38:30 - [ERROR]                python(abi) = 2.7
-13:38:30 - [ERROR]                python(abi) = 2.7
-13:38:30 - [ERROR]            Available: python-2.7.5-38.el7_2.x86_64 (updates)
-13:38:30 - [ERROR]                python(abi) = 2.7
-13:38:30 - [ERROR]                python(abi) = 2.7
-13:38:30 - [ERROR] Error: Package: libstoragemgmt-1.3.2-1.el6.x86_64 (epel)
-13:38:30 - [ERROR]            Requires: libyajl.so.1()(64bit)
-13:38:30 - [ERROR] Error: Package: 2:ntfsprogs-2016.2.22-1.el6.x86_64 (epel)
-13:38:30 - [ERROR]            Requires: libgnutls.so.26()(64bit)
-13:38:30 - [ERROR] Error: Package: libstoragemgmt-1.3.2-1.el6.x86_64 (epel)
-13:38:30 - [ERROR]            Requires: libconfig.so.8()(64bit)
-13:38:30 - [ERROR] Error: Package: libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)
-13:38:30 - [ERROR]            Requires: libpython2.6.so.1.0()(64bit)
-13:38:30 - [ERROR] Error: Package: libstoragemgmt-python-1.3.2-1.el6.noarch (epel)
-13:38:30 - [ERROR]            Requires: python(abi) = 2.6
-13:38:30 - [ERROR]            Removing: python-2.7.5-34.el7.x86_64 (@anaconda)
-13:38:30 - [ERROR]                python(abi) = 2.7
-13:38:30 - [ERROR]                python(abi) = 2.7
-13:38:30 - [ERROR]            Updated By: python-2.7.5-39.el7_2.x86_64 (updates)
-13:38:30 - [ERROR]                python(abi) = 2.7
-13:38:30 - [ERROR]                python(abi) = 2.7
-13:38:30 - [ERROR]            Available: python-2.7.5-38.el7_2.x86_64 (updates)
-13:38:30 - [ERROR]                python(abi) = 2.7
-13:38:30 - [ERROR]                python(abi) = 2.7
-13:38:30 - [ERROR] Error: Package: libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)
-13:38:30 - [ERROR]            Requires: libudev.so.0()(64bit)
-13:38:30 - [ERROR] Error: Package: libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)
-13:38:30 - [ERROR]            Requires: libyajl.so.1()(64bit)
-13:38:30 - [ERROR] Error: Package: 2:ntfsprogs-2016.2.22-1.el6.x86_64 (epel)
-13:38:30 - [ERROR]            Requires: libgnutls.so.26(GNUTLS_1_4)(64bit)
-13:38:30 - [ERROR] Error: WALinuxAgent conflicts with 1:NetworkManager-1.0.6-31.el7_2.x86_64
-13:38:30 - [ERROR] Error: Package: gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)
-13:38:30 - [ERROR]            Requires: libnettle.so.4()(64bit)
-13:38:30 - [ERROR]            Removing: nettle-2.7.1-4.el7.x86_64 (@anaconda)
-13:38:30 - [ERROR]                libnettle.so.4()(64bit)
-13:38:30 - [ERROR]            Updated By: nettle-3.2-2.el6.x86_64 (epel)
-13:38:30 - [ERROR]               ~libnettle.so.6()(64bit)
-13:38:30 - [ERROR] Error: Package: gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)
-13:38:30 - [ERROR]            Requires: libhogweed.so.2()(64bit)
-13:38:30 - [ERROR]            Removing: nettle-2.7.1-4.el7.x86_64 (@anaconda)
-13:38:30 - [ERROR]                libhogweed.so.2()(64bit)
-13:38:31 - [ERROR]            Updated By: nettle-3.2-2.el6.x86_64 (epel)
-13:38:31 - [ERROR]               ~libhogweed.so.4()(64bit)
-13:38:31 - [ERROR] Warning: RPMDB altered outside of yum.
-13:38:31 - [ERROR] azuregfs.sh: line 268: /etc/init.d/glusterd: No such file or directory
-13:38:31 - [ERROR] ls: cannot access /datadrive/brick: No such file or directory
-13:38:31 - [ERROR] 
-13:38:31 - [ERROR] ".
-13:38:31 - [ERROR] No C:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_bui
-13:38:31 - [ERROR] ld2\moodleazure-m\Scripts\Deploy-AzureResourceGroup.ps1:98 caractere:1
-13:38:31 - [ERROR] + New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFil ...
-13:38:31 - [ERROR] + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-13:38:31 - [ERROR]     + CategoryInfo          : NotSpecified: (:) [New-AzureRmResourceGroupDeplo 
-13:38:31 - [ERROR]    yment], Exception
-13:38:31 - [ERROR]     + FullyQualifiedErrorId : Microsoft.Azure.Commands.ResourceManager.Cmdlets 
-13:38:31 - [ERROR]    .Implementation.NewAzureResourceGroupDeploymentCmdlet
-13:38:31 - [ERROR]  
-13:38:31 - [VERBOSE] 13:38:31 - Checking deployment status in 60 seconds
-13:39:31 - [VERBOSE] 13:39:31 - Resource Microsoft.Compute/virtualMachineScaleSets 'webfarm' provisioning status is running
-13:39:31 - [VERBOSE] 13:39:31 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa1' provisioning status is succeeded
-13:39:31 - [VERBOSE] 13:39:31 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa2' provisioning status is succeeded
-13:39:31 - [VERBOSE] 13:39:31 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa0' provisioning status is succeeded
-13:39:31 - [VERBOSE] 13:39:31 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa4' provisioning status is succeeded
-13:39:31 - [VERBOSE] 13:39:31 - Checking deployment status in 60 seconds
-13:40:33 - [VERBOSE] 13:40:33 - Checking deployment status in 60 seconds
-13:41:34 - [VERBOSE] 13:41:33 - Checking deployment status in 60 seconds
-13:42:34 - [VERBOSE] 13:42:34 - Checking deployment status in 60 seconds
-13:43:34 - [VERBOSE] 13:43:34 - Checking deployment status in 60 seconds
-13:44:35 - [VERBOSE] 13:44:35 - Checking deployment status in 60 seconds
-13:45:35 - [VERBOSE] 13:45:35 - Checking deployment status in 60 seconds
-13:46:35 - [ERROR] New-AzureRmResourceGroupDeployment : 13:46:35 - Resource 
-13:46:35 - [ERROR] Microsoft.Compute/virtualMachineScaleSets 'webfarm' failed with message '{
-13:46:35 - [ERROR]   "status": "Failed",
-13:46:35 - [ERROR]   "error": {
-13:46:35 - [ERROR]     "code": "ResourceDeploymentFailure",
-13:46:35 - [ERROR]     "message": "The resource operation completed with terminal provisioning 
-13:46:35 - [ERROR] state 'Failed'.",
-13:46:35 - [ERROR]     "details": [
-13:46:35 - [ERROR]       {
-13:46:35 - [ERROR]         "code": "VMExtensionProvisioningError",
-13:46:35 - [ERROR]         "message": "VM has reported a failure when processing extension 
-13:46:35 - [ERROR] 'setup_moodle'. Error message: \"Enable failed: Failed with error: Failed to 
-13:46:35 - [ERROR] download external file with uri: https://raw.githubusercontent.com/ftvello/Mood
-13:46:35 - [ERROR] leAzure-M/master/Scripts/setup_moodle.sh with error HTTP Error 404: Not Found, 
-13:46:35 - [ERROR] Traceback (most recent call last):\n  File \"/var/lib/waagent/Microsoft.OSTCExt
-13:46:35 - [ERROR] ensions.CustomScriptForLinux-1.5.2.1/customscript.py\", line 71, in main\n    
-13:46:35 - [ERROR] daemon(hutil)\n  File \"/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptF
-13:46:35 - [ERROR] orLinux-1.5.2.1/customscript.py\", line 269, in daemon\n    retry_count = 
-13:46:35 - [ERROR] download_files_with_retry(hutil, retry_count, wait)\n  File \"/var/lib/waagent/
-13:46:35 - [ERROR] Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/customscript.py\", line 
-13:46:35 - [ERROR] 110, in download_files_with_retry\n    download_files(hutil)\n  File \"/var/lib
-13:46:35 - [ERROR] /waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/customscript.py\
-13:46:35 - [ERROR] ", line 215, in download_files\n    download_external_files(blob_uris, cmd, 
-13:46:35 - [ERROR] hutil)\n  File \"/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux
-13:46:35 - [ERROR] -1.5.2.1/customscript.py\", line 349, in download_external_files\n    
-13:46:35 - [ERROR] download_external_file(uri, command, hutil)\n  File \"/var/lib/waagent/Microsof
-13:46:35 - [ERROR] t.OSTCExtensions.CustomScriptForLinux-1.5.2.1/customscript.py\", line 366, in 
-13:46:35 - [ERROR] download_external_file\n    raise Exception(error_msg)\nException: Failed to 
-13:46:35 - [ERROR] download external file with uri: https://raw.githubusercontent.com/ftvello/Mood
-13:46:35 - [ERROR] leAzure-M/master/Scripts/setup_moodle.sh with error HTTP Error 404: Not 
-13:46:35 - [ERROR] Found\n\"."
-13:46:35 - [ERROR]       }
-13:46:35 - [ERROR]     ]
-13:46:35 - [ERROR]   }
-13:46:35 - [ERROR] }'
-13:46:35 - [ERROR] No C:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_bui
-13:46:35 - [ERROR] ld2\moodleazure-m\Scripts\Deploy-AzureResourceGroup.ps1:98 caractere:1
-13:46:35 - [ERROR] + New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFil ...
-13:46:35 - [ERROR] + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-13:46:35 - [ERROR]     + CategoryInfo          : NotSpecified: (:) [New-AzureRmResourceGroupDeplo 
-13:46:35 - [ERROR]    yment], Exception
-13:46:35 - [ERROR]     + FullyQualifiedErrorId : Microsoft.Azure.Commands.ResourceManager.Cmdlets 
-13:46:35 - [ERROR]    .Implementation.NewAzureResourceGroupDeploymentCmdlet
-13:46:35 - [ERROR]  
-13:46:35 - [ERROR] New-AzureRmResourceGroupDeployment : 13:46:35 - VM has reported a failure when 
-13:46:35 - [ERROR] processing extension 'setup_moodle'. Error message: "Enable failed: Failed 
-13:46:35 - [ERROR] with error: Failed to download external file with uri: https://raw.githubuserco
-13:46:35 - [ERROR] ntent.com/ftvello/MoodleAzure-M/master/Scripts/setup_moodle.sh with error HTTP 
-13:46:35 - [ERROR] Error 404: Not Found, Traceback (most recent call last):
-13:46:35 - [ERROR]   File "/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/
-13:46:35 - [ERROR] customscript.py", line 71, in main
-13:46:35 - [ERROR]     daemon(hutil)
-13:46:35 - [ERROR]   File "/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/
-13:46:35 - [ERROR] customscript.py", line 269, in daemon
-13:46:35 - [ERROR]     retry_count = download_files_with_retry(hutil, retry_count, wait)
-13:46:35 - [ERROR]   File "/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/
-13:46:35 - [ERROR] customscript.py", line 110, in download_files_with_retry
-13:46:35 - [ERROR]     download_files(hutil)
-13:46:35 - [ERROR]   File "/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/
-13:46:35 - [ERROR] customscript.py", line 215, in download_files
-13:46:35 - [ERROR]     download_external_files(blob_uris, cmd, hutil)
-13:46:35 - [ERROR]   File "/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/
-13:46:35 - [ERROR] customscript.py", line 349, in download_external_files
-13:46:35 - [ERROR]     download_external_file(uri, command, hutil)
-13:46:35 - [ERROR]   File "/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/
-13:46:35 - [ERROR] customscript.py", line 366, in download_external_file
-13:46:35 - [ERROR]     raise Exception(error_msg)
-13:46:35 - [ERROR] Exception: Failed to download external file with uri: https://raw.githubusercon
-13:46:35 - [ERROR] tent.com/ftvello/MoodleAzure-M/master/Scripts/setup_moodle.sh with error HTTP 
-13:46:35 - [ERROR] Error 404: Not Found
-13:46:35 - [ERROR] ".
-13:46:35 - [ERROR] No C:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_bui
-13:46:35 - [ERROR] ld2\moodleazure-m\Scripts\Deploy-AzureResourceGroup.ps1:98 caractere:1
-13:46:35 - [ERROR] + New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFil ...
-13:46:35 - [ERROR] + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-13:46:35 - [ERROR]     + CategoryInfo          : NotSpecified: (:) [New-AzureRmResourceGroupDeplo 
-13:46:35 - [ERROR]    yment], Exception
-13:46:35 - [ERROR]     + FullyQualifiedErrorId : Microsoft.Azure.Commands.ResourceManager.Cmdlets 
-13:46:35 - [ERROR]    .Implementation.NewAzureResourceGroupDeploymentCmdlet
-13:46:35 - [ERROR]  
-13:46:35 - [ERROR] New-AzureRmResourceGroupDeployment : 13:46:35 - Template output evaluation 
-13:46:35 - [ERROR] skipped: at least one resource deployment operation failed. Please list 
-13:46:35 - [ERROR] deployment operations for details. Please see https://aka.ms/arm-debug for 
-13:46:35 - [ERROR] usage details.
-13:46:35 - [ERROR] No C:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_bui
-13:46:35 - [ERROR] ld2\moodleazure-m\Scripts\Deploy-AzureResourceGroup.ps1:98 caractere:1
-13:46:35 - [ERROR] + New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFil ...
-13:46:35 - [ERROR] + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-13:46:35 - [ERROR]     + CategoryInfo          : NotSpecified: (:) [New-AzureRmResourceGroupDeplo 
-13:46:35 - [ERROR]    yment], Exception
-13:46:35 - [ERROR]     + FullyQualifiedErrorId : Microsoft.Azure.Commands.ResourceManager.Cmdlets 
-13:46:35 - [ERROR]    .Implementation.NewAzureResourceGroupDeploymentCmdlet
-13:46:35 - [ERROR]  
-13:46:35 - [ERROR] New-AzureRmResourceGroupDeployment : 13:46:35 - Template output evaluation 
-13:46:35 - [ERROR] skipped: at least one resource deployment operation failed. Please list 
-13:46:35 - [ERROR] deployment operations for details. Please see https://aka.ms/arm-debug for 
-13:46:35 - [ERROR] usage details.
-13:46:35 - [ERROR] No C:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_bui
-13:46:35 - [ERROR] ld2\moodleazure-m\Scripts\Deploy-AzureResourceGroup.ps1:98 caractere:1
-13:46:35 - [ERROR] + New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFil ...
-13:46:35 - [ERROR] + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-13:46:35 - [ERROR]     + CategoryInfo          : NotSpecified: (:) [New-AzureRmResourceGroupDeplo 
-13:46:35 - [ERROR]    yment], Exception
-13:46:35 - [ERROR]     + FullyQualifiedErrorId : Microsoft.Azure.Commands.ResourceManager.Cmdlets 
-13:46:35 - [ERROR]    .Implementation.NewAzureResourceGroupDeploymentCmdlet
-13:46:35 - [ERROR]  
-13:46:36 - 
-13:46:36 - DeploymentName          : linuxvirtualmachinescaleset-1012-1626
-13:46:36 - CorrelationId           : e117e077-e25d-4ef1-9ffc-454b18d64867
-13:46:36 - ResourceGroupName       : cloud06
-13:46:36 - ProvisioningState       : Failed
-13:46:36 - Timestamp               : 12/10/2016 16:45:44
-13:46:36 - Mode                    : Incremental
-13:46:36 - TemplateLink            : 
-13:46:36 - TemplateLinkString      : 
-13:46:36 - DeploymentDebugLogLevel : 
-13:46:36 - Parameters              : {[resourcesPrefix, Microsoft.Azure.Commands.ResourceM
-13:46:36 -                           anager.Cmdlets.SdkModels.DeploymentVariable], 
-13:46:36 -                           [vmSize, Microsoft.Azure.Commands.ResourceManager.Cmd
-13:46:36 -                           lets.SdkModels.DeploymentVariable], [moodleVersion, M
-13:46:36 -                           icrosoft.Azure.Commands.ResourceManager.Cmdlets.SdkMo
-13:46:36 -                           dels.DeploymentVariable], [adminUsername, Microsoft.A
-13:46:36 -                           zure.Commands.ResourceManager.Cmdlets.SdkModels.Deplo
-13:46:36 -                           ymentVariable]...}
-13:46:36 - ParametersString        : 
-13:46:36 -                           Name             Type                       Value    
-13:46:36 -                            
-13:46:36 -                           ===============  =========================  
-13:46:36 -                           ==========
-13:46:36 -                           resourcesPrefix  String                     
-13:46:36 -                           azmooclus 
-13:46:36 -                           vmSize           String                     
-13:46:36 -                           Standard_DS1_v2
-13:46:36 -                           moodleVersion    String                     
-13:46:36 -                           MOODLE_30_STABLE
-13:46:36 -                           adminUsername    String                     
-13:46:36 -                           azureadmin
-13:46:36 -                           adminPassword    SecureString                        
-13:46:36 -                            
-13:46:36 -                           mySQLuserPassword  SecureString                      
-13:46:36 -                              
-13:46:36 -                           mySQLrootPassword  SecureString                      
-13:46:36 -                              
-13:46:36 -                           
-13:46:36 - Outputs                 : 
-13:46:36 - OutputsString           : 
-13:46:36 - 
-13:46:36 - 
-13:46:36 - 
-13:46:36 - 
-13:46:36 - Deploying template using PowerShell script failed.
-13:46:36 - Tell us about your experience at http://go.microsoft.com/fwlink/?LinkId=691202
+﻿11:34:22 - Build started.
+11:34:22 - Project "MoodleAzure_Cloud01_build2.deployproj" (StageArtifacts target(s)):
+11:34:22 - Project "MoodleAzure_Cloud01_build2.deployproj" (ContentFilesProjectOutputGroup target(s)):
+11:34:22 - Done building project "MoodleAzure_Cloud01_build2.deployproj".
+11:34:22 - Done building project "MoodleAzure_Cloud01_build2.deployproj".
+11:34:22 - Build succeeded.
+11:34:22 - The following parameter values will be used for this deployment:
+11:34:22 -     resourcesPrefix: azmooclus
+11:34:22 -     vmSize: Standard_DS1_v2
+11:34:22 -     moodleVersion: MOODLE_30_STABLE
+11:34:22 -     adminUsername: azureadmin
+11:34:22 -     adminPassword: <securestring>
+11:34:22 -     mySQLuserPassword: <securestring>
+11:34:22 -     mySQLrootPassword: <securestring>
+11:34:22 - Launching deployment PowerShell script with the following command:
+11:34:22 - 'c:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_build2\moodleazure-m\Scripts\Deploy-AzureResourceGroup.ps1' -StorageAccountName '' -ResourceGroupName 'CLOUD06' -ResourceGroupLocation 'brazilsouth' -TemplateFile 'c:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_build2\moodleazure-m\templates\linuxvirtualmachinescaleset.json' -TemplateParametersFile 'c:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_build2\moodleazure-m\templates\linuxvirtualmachinescaleset.parameters.json' -ArtifactStagingDirectory '..\bin\Debug\staging'
+11:34:30 - 
+11:34:30 - 
+11:34:30 - Environment           : AzureCloud
+11:34:30 - Account               : fabio.vello@itcore.com.br
+11:34:30 - TenantId              : f0ed7551-0c0d-456a-bd7d-c6ec5616b37b
+11:34:30 - SubscriptionId        : 40788d9e-7a91-44eb-95a2-c08261a4ff34
+11:34:30 - SubscriptionName      : Microsoft Azure Enterprise
+11:34:30 - CurrentStorageAccount : 
+11:34:30 - 
+11:34:31 - [VERBOSE] Realizando a operação "Replacing resource group ..." no destino "".
+11:34:31 - [VERBOSE] 11:34:31 - Created resource group 'CLOUD06' in location 'brazilsouth'
+11:34:31 - 
+11:34:31 - ResourceGroupName : CLOUD06
+11:34:31 - Location          : brazilsouth
+11:34:31 - ProvisioningState : Succeeded
+11:34:31 - Tags              : 
+11:34:31 - TagsTable         : 
+11:34:31 - ResourceId        : /subscriptions/40788d9e-7a91-44eb-95a2-c08261a4ff34/resourc
+11:34:31 -                     eGroups/CLOUD06
+11:34:31 - 
+11:34:31 - [VERBOSE] Realizando a operação "Creating Deployment" no destino "CLOUD06".
+11:34:34 - [VERBOSE] 11:34:34 - Template is valid.
+11:34:35 - [VERBOSE] 11:34:35 - Create template deployment 'linuxvirtualmachinescaleset-1013-1434'
+11:34:35 - [VERBOSE] 11:34:35 - Checking deployment status in 5 seconds
+11:34:40 - [VERBOSE] 11:34:40 - Checking deployment status in 10 seconds
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Storage/storageAccounts 'dbazmooclussa1' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Network/publicIPAddresses 'webpip' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Network/publicIPAddresses 'jb-azmooclus' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Network/networkSecurityGroups 'jboxNsg' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Compute/availabilitySets 'dbAvSet' provisioning status is succeeded
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Compute/availabilitySets 'GfsAvSet' provisioning status is succeeded
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Network/virtualNetworks 'azmooclusvnet' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Storage/storageAccounts 'azmooclussa1' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Storage/storageAccounts 'azmooclussa0' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa1' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa3' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa0' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa4' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Storage/storageAccounts 'dbazmooclussa0' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa2' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Resource Microsoft.Storage/storageAccounts 'azmooclussaweunfkbdezz2i' provisioning status is running
+11:34:50 - [VERBOSE] 11:34:50 - Checking deployment status in 15 seconds
+11:35:06 - [VERBOSE] 11:35:06 - Resource Microsoft.Network/publicIPAddresses 'webpip' provisioning status is succeeded
+11:35:06 - [VERBOSE] 11:35:06 - Resource Microsoft.Network/networkInterfaces 'dbnic1' provisioning status is succeeded
+11:35:06 - [VERBOSE] 11:35:06 - Resource Microsoft.Network/networkInterfaces 'dbnic0' provisioning status is succeeded
+11:35:06 - [VERBOSE] 11:35:06 - Resource Microsoft.Network/loadBalancers 'mariadblb' provisioning status is succeeded
+11:35:06 - [VERBOSE] 11:35:06 - Resource Microsoft.Network/networkInterfaces 'gfsnic0' provisioning status is succeeded
+11:35:06 - [VERBOSE] 11:35:06 - Resource Microsoft.Network/networkInterfaces 'gfsnic1' provisioning status is succeeded
+11:35:06 - [VERBOSE] 11:35:06 - Resource Microsoft.Network/publicIPAddresses 'webpip' provisioning status is succeeded
+11:35:06 - [VERBOSE] 11:35:06 - Resource Microsoft.Network/publicIPAddresses 'jb-azmooclus' provisioning status is succeeded
+11:35:06 - [VERBOSE] 11:35:06 - Resource Microsoft.Network/networkSecurityGroups 'jboxNsg' provisioning status is succeeded
+11:35:06 - [VERBOSE] 11:35:06 - Resource Microsoft.Network/virtualNetworks 'azmooclusvnet' provisioning status is succeeded
+11:35:06 - [VERBOSE] 11:35:06 - Checking deployment status in 20 seconds
+11:35:26 - [VERBOSE] 11:35:26 - Resource Microsoft.Storage/storageAccounts 'azmooclussaweunfkbdezz2i' provisioning status is succeeded
+11:35:26 - [VERBOSE] 11:35:26 - Resource Microsoft.Network/networkInterfaces 'jboxnic' provisioning status is succeeded
+11:35:26 - [VERBOSE] 11:35:26 - Resource Microsoft.Network/loadBalancers 'lbWeb' provisioning status is succeeded
+11:35:26 - [VERBOSE] 11:35:26 - Resource Microsoft.Storage/storageAccounts 'dbazmooclussa1' provisioning status is succeeded
+11:35:26 - [VERBOSE] 11:35:26 - Resource Microsoft.Storage/storageAccounts 'azmooclussa0' provisioning status is succeeded
+11:35:26 - [VERBOSE] 11:35:26 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa1' provisioning status is succeeded
+11:35:26 - [VERBOSE] 11:35:26 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa0' provisioning status is succeeded
+11:35:26 - [VERBOSE] 11:35:26 - Resource Microsoft.Storage/storageAccounts 'dbazmooclussa0' provisioning status is succeeded
+11:35:26 - [VERBOSE] 11:35:26 - Resource Microsoft.Storage/storageAccounts 'azmooclussaweunfkbdezz2i' provisioning status is succeeded
+11:35:26 - [VERBOSE] 11:35:26 - Checking deployment status in 25 seconds
+11:35:51 - [VERBOSE] 11:35:51 - Resource Microsoft.Compute/virtualMachines 'dbazmooclusvm0' provisioning status is running
+11:35:51 - [VERBOSE] 11:35:51 - Resource Microsoft.Compute/virtualMachines 'gfsazmooclusvm0' provisioning status is running
+11:35:51 - [VERBOSE] 11:35:51 - Checking deployment status in 30 seconds
+11:36:21 - [VERBOSE] 11:36:21 - Checking deployment status in 35 seconds
+11:36:56 - [VERBOSE] 11:36:56 - Checking deployment status in 40 seconds
+11:37:37 - [VERBOSE] 11:37:37 - Checking deployment status in 45 seconds
+11:38:22 - [VERBOSE] 11:38:22 - Checking deployment status in 50 seconds
+11:39:12 - [VERBOSE] 11:39:12 - Resource Microsoft.Compute/virtualMachines 'dbazmooclusvm0' provisioning status is succeeded
+11:39:12 - [VERBOSE] 11:39:12 - Resource Microsoft.Compute/virtualMachines 'gfsazmooclusvm0' provisioning status is succeeded
+11:39:12 - [VERBOSE] 11:39:12 - Checking deployment status in 55 seconds
+11:40:07 - [VERBOSE] 11:40:07 - Resource Microsoft.Compute/virtualMachines/extensions 'gfsazmooclusvm0/setupGluster' provisioning status is running
+11:40:07 - [VERBOSE] 11:40:07 - Resource Microsoft.Compute/virtualMachines/extensions 'dbazmooclusvm0/install_mariadb' provisioning status is running
+11:40:07 - [VERBOSE] 11:40:07 - Checking deployment status in 60 seconds
+11:41:07 - [VERBOSE] 11:41:07 - Resource Microsoft.Compute/virtualMachines 'gfsazmooclusvm1' provisioning status is running
+11:41:07 - [VERBOSE] 11:41:07 - Resource Microsoft.Compute/virtualMachines 'dbazmooclusvm1' provisioning status is running
+11:41:07 - [VERBOSE] 11:41:07 - Resource Microsoft.Storage/storageAccounts 'azmooclussa1' provisioning status is succeeded
+11:41:07 - [VERBOSE] 11:41:07 - Checking deployment status in 60 seconds
+11:42:07 - [VERBOSE] 11:42:07 - Resource Microsoft.Compute/virtualMachines 'jboxazmooclusvm' provisioning status is running
+11:42:07 - [VERBOSE] 11:42:07 - Resource Microsoft.Compute/virtualMachines/extensions 'gfsazmooclusvm1/setupGluster' provisioning status is running
+11:42:07 - [VERBOSE] 11:42:07 - Resource Microsoft.Compute/virtualMachines 'gfsazmooclusvm1' provisioning status is succeeded
+11:42:07 - [VERBOSE] 11:42:07 - Resource Microsoft.Compute/virtualMachines/extensions 'gfsazmooclusvm0/setupGluster' provisioning status is succeeded
+11:42:08 - [VERBOSE] 11:42:08 - Checking deployment status in 60 seconds
+11:43:08 - [VERBOSE] 11:43:08 - Resource Microsoft.Compute/virtualMachines/extensions 'dbazmooclusvm1/install_mariadb' provisioning status is running
+11:43:08 - [VERBOSE] 11:43:08 - Resource Microsoft.Compute/virtualMachines 'dbazmooclusvm1' provisioning status is succeeded
+11:43:08 - [VERBOSE] 11:43:08 - Checking deployment status in 60 seconds
+11:44:08 - [VERBOSE] 11:44:08 - Resource Microsoft.Compute/virtualMachines/extensions 'jboxazmooclusvm/install_moodle' provisioning status is running
+11:44:08 - [VERBOSE] 11:44:08 - Resource Microsoft.Compute/virtualMachines 'jboxazmooclusvm' provisioning status is succeeded
+11:44:08 - [VERBOSE] 11:44:08 - Checking deployment status in 60 seconds
+11:45:08 - [VERBOSE] 11:45:08 - Checking deployment status in 60 seconds
+11:46:08 - [VERBOSE] 11:46:08 - Checking deployment status in 60 seconds
+11:47:09 - [VERBOSE] 11:47:09 - Resource Microsoft.Compute/virtualMachineScaleSets 'webfarm' provisioning status is running
+11:47:09 - [VERBOSE] 11:47:09 - Resource Microsoft.Compute/virtualMachines/extensions 'jboxazmooclusvm/install_moodle' provisioning status is succeeded
+11:47:09 - [VERBOSE] 11:47:09 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa3' provisioning status is succeeded
+11:47:09 - [VERBOSE] 11:47:09 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa4' provisioning status is succeeded
+11:47:09 - [VERBOSE] 11:47:09 - Resource Microsoft.Storage/storageAccounts 'vmssazmooclussa2' provisioning status is succeeded
+11:47:09 - [VERBOSE] 11:47:09 - Checking deployment status in 60 seconds
+11:48:09 - [VERBOSE] 11:48:09 - Checking deployment status in 60 seconds
+11:49:09 - [VERBOSE] 11:49:09 - Checking deployment status in 60 seconds
+11:50:09 - [ERROR] New-AzureRmResourceGroupDeployment : 11:50:09 - Resource 
+11:50:09 - [ERROR] Microsoft.Compute/virtualMachines/extensions 'gfsazmooclusvm1/setupGluster' 
+11:50:09 - [ERROR] failed with message '{
+11:50:09 - [ERROR]   "status": "Failed",
+11:50:09 - [ERROR]   "error": {
+11:50:09 - [ERROR]     "code": "ResourceDeploymentFailure",
+11:50:09 - [ERROR]     "message": "The resource operation completed with terminal provisioning 
+11:50:09 - [ERROR] state 'Failed'.",
+11:50:09 - [ERROR]     "details": [
+11:50:09 - [ERROR]       {
+11:50:09 - [ERROR]         "code": "VMExtensionProvisioningError",
+11:50:09 - [ERROR]         "message": "VM has reported a failure when processing extension 
+11:50:09 - [ERROR] 'setupGluster'. Error message: \"Script returned an 
+11:50:09 - [ERROR] error.\n---stdout---\nnparse for package: 
+11:50:09 - [ERROR] glusterfs-libs-3.7.1-16.0.1.el7.centos.x86_64\n--> Running transaction 
+11:50:09 - [ERROR] check\n---> Package rsyslog-mmjsonparse.x86_64 0:7.4.7-12.el7 will be 
+11:50:09 - [ERROR] installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n=====
+11:50:09 - [ERROR] ===========================================================================\n 
+11:50:09 - [ERROR] Package                    Arch     Version                    Repository\n    
+11:50:09 - [ERROR]                                                                        Size\n==
+11:50:09 - [ERROR] ==============================================================================\
+11:50:09 - [ERROR] nInstalling:\n glusterfs                  x86_64   3.7.1-16.0.1.el7.centos    
+11:50:09 - [ERROR] updates   422 k\n glusterfs-cli              x86_64   3.7.1-16.0.1.el7.centos  
+11:50:09 - [ERROR]   updates   153 k\n glusterfs-fuse             x86_64   
+11:50:09 - [ERROR] 3.7.1-16.0.1.el7.centos    updates   107 k\nInstalling for dependencies:\n 
+11:50:09 - [ERROR] glusterfs-client-xlators   x86_64   3.7.1-16.0.1.el7.centos    updates   732 
+11:50:09 - [ERROR] k\n glusterfs-libs             x86_64   3.7.1-16.0.1.el7.centos    updates   
+11:50:09 - [ERROR] 322 k\n rsyslog-mmjsonparse        x86_64   7.4.7-12.el7               base    
+11:50:09 - [ERROR]    29 k\n\nTransaction Summary\n===============================================
+11:50:09 - [ERROR] =================================\nInstall  3 Packages (+3 Dependent 
+11:50:09 - [ERROR] packages)\n\nTotal download size: 1.7 M\nInstalled size: 6.6 M\nDownloading pac
+11:50:09 - [ERROR] kages:\n-----------------------------------------------------------------------
+11:50:09 - [ERROR] ---------\nTotal                                              2.8 MB/s | 1.7 
+11:50:09 - [ERROR] MB  00:00     \nRunning transaction check\nRunning transaction 
+11:50:09 - [ERROR] test\nTransaction test succeeded\nRunning transaction\n  Installing : 
+11:50:09 - [ERROR] rsyslog-mmjsonparse-7.4.7-12.el7.x86_64                      1/6 \n  
+11:50:09 - [ERROR] Installing : glusterfs-libs-3.7.1-16.0.1.el7.centos.x86_64                2/6 
+11:50:09 - [ERROR] \n  Installing : glusterfs-3.7.1-16.0.1.el7.centos.x86_64                     
+11:50:09 - [ERROR] 3/6 \n  Installing : glusterfs-client-xlators-3.7.1-16.0.1.el7.centos.x86_64   
+11:50:09 - [ERROR]    4/6 \n  Installing : glusterfs-fuse-3.7.1-16.0.1.el7.centos.x86_64          
+11:50:09 - [ERROR]       5/6 \n  Installing : glusterfs-cli-3.7.1-16.0.1.el7.centos.x86_64        
+11:50:09 - [ERROR]          6/6 \n  Verifying  : glusterfs-3.7.1-16.0.1.el7.centos.x86_64         
+11:50:09 - [ERROR]             1/6 \n  Verifying  : rsyslog-mmjsonparse-7.4.7-12.el7.x86_64       
+11:50:09 - [ERROR]                2/6 \n  Verifying  : 
+11:50:09 - [ERROR] glusterfs-cli-3.7.1-16.0.1.el7.centos.x86_64                 3/6 \n  Verifying 
+11:50:09 - [ERROR]  : glusterfs-client-xlators-3.7.1-16.0.1.el7.centos.x86_64      4/6 \n  
+11:50:09 - [ERROR] Verifying  : glusterfs-libs-3.7.1-16.0.1.el7.centos.x86_64                5/6 
+11:50:09 - [ERROR] \n  Verifying  : glusterfs-fuse-3.7.1-16.0.1.el7.centos.x86_64                
+11:50:09 - [ERROR] 6/6 \n\nInstalled:\n  glusterfs.x86_64 0:3.7.1-16.0.1.el7.centos               
+11:50:09 - [ERROR]                      \n  glusterfs-cli.x86_64 0:3.7.1-16.0.1.el7.centos        
+11:50:09 - [ERROR]                         \n  glusterfs-fuse.x86_64 0:3.7.1-16.0.1.el7.centos    
+11:50:09 - [ERROR]                            \n\nDependency Installed:\n  
+11:50:09 - [ERROR] glusterfs-client-xlators.x86_64 0:3.7.1-16.0.1.el7.centos                     
+11:50:09 - [ERROR] \n  glusterfs-libs.x86_64 0:3.7.1-16.0.1.el7.centos                            
+11:50:09 - [ERROR]    \n  rsyslog-mmjsonparse.x86_64 0:7.4.7-12.el7                               
+11:50:09 - [ERROR]       \n\nComplete!\ngluster peer probe gfsazmooclusvm0 failed\ngluster peer 
+11:50:09 - [ERROR] status gfsazmooclusvm0 failed\ngluster peer probe gfsazmooclusvm0 
+11:50:09 - [ERROR] failed\ngluster peer status gfsazmooclusvm0 failed\ngluster peer probe 
+11:50:09 - [ERROR] gfsazmooclusvm0 failed\ngluster peer status gfsazmooclusvm0 failed\ngluster 
+11:50:09 - [ERROR] peer probe gfsazmooclusvm0 failed\ngluster peer status gfsazmooclusvm0 
+11:50:09 - [ERROR] failed\ngluster peer probe gfsazmooclusvm0 failed\ngluster peer status 
+11:50:09 - [ERROR] gfsazmooclusvm0 failed\ngluster peer probe gfsazmooclusvm0 failed\ngluster 
+11:50:09 - [ERROR] peer status gfsazmooclusvm0 failed\ngluster peer probe gfsazmooclusvm0 
+11:50:09 - [ERROR] failed\ngluster peer status gfsazmooclusvm0 failed\ngluster peer probe 
+11:50:09 - [ERROR] gfsazmooclusvm0 failed\ngluster peer status gfsazmooclusvm0 failed\ngluster 
+11:50:09 - [ERROR] peer probe gfsazmooclusvm0 failed\ngluster peer status gfsazmooclusvm0 
+11:50:09 - [ERROR] failed\ngluster peer probe gfsazmooclusvm0 failed\ngluster peer status 
+11:50:09 - [ERROR] gfsazmooclusvm0 failed\nConnection failed. Please check if gluster daemon is 
+11:50:09 - [ERROR] operational.\nConnection failed. Please check if gluster daemon is 
+11:50:09 - [ERROR] operational.\nConnection failed. Please check if gluster daemon is 
+11:50:09 - [ERROR] operational.\n\n---errout---\nthon(abi) = 2.7\n               python(abi) = 
+11:50:09 - [ERROR] 2.7\n           Updated By: python-2.7.5-39.el7_2.x86_64 (updates)\n           
+11:50:09 - [ERROR]     python(abi) = 2.7\n               python(abi) = 2.7\n           Available: 
+11:50:09 - [ERROR] python-2.7.5-38.el7_2.x86_64 (updates)\n               python(abi) = 2.7\n     
+11:50:09 - [ERROR]           python(abi) = 2.7\nError: Package: 
+11:50:09 - [ERROR] libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
+11:50:09 - [ERROR] libudev.so.0()(64bit)\nError: Package: 
+11:50:09 - [ERROR] libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
+11:50:09 - [ERROR] libyajl.so.1()(64bit)\nError: Package: gnutls-3.3.8-14.el7_2.x86_64 
+11:50:09 - [ERROR] (@CentOS-Updates)\n           Requires: libnettle.so.4()(64bit)\n           
+11:50:09 - [ERROR] Removing: nettle-2.7.1-4.el7.x86_64 (@anaconda)\n               
+11:50:10 - [ERROR] libnettle.so.4()(64bit)\n           Updated By: nettle-3.2-2.el6.x86_64 
+11:50:10 - [ERROR] (epel)\n              ~libnettle.so.6()(64bit)\nError: Package: 
+11:50:10 - [ERROR] gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)\n           Requires: 
+11:50:10 - [ERROR] libhogweed.so.2()(64bit)\n           Removing: nettle-2.7.1-4.el7.x86_64 
+11:50:10 - [ERROR] (@anaconda)\n               libhogweed.so.2()(64bit)\n           Updated By: 
+11:50:10 - [ERROR] nettle-3.2-2.el6.x86_64 (epel)\n              
+11:50:10 - [ERROR] ~libhogweed.so.4()(64bit)\n--2016-10-13 14:43:04--  http://download.gluster.org
+11:50:10 - [ERROR] /pub/gluster/glusterfs/LATEST/EPEL.repo/glusterfs-epel.repo\nResolving 
+11:50:10 - [ERROR] download.gluster.org (download.gluster.org)... 23.253.208.221, 
+11:50:10 - [ERROR] 2001:4801:7824:104:be76:4eff:fe10:23d8\nConnecting to download.gluster.org 
+11:50:10 - [ERROR] (download.gluster.org)|23.253.208.221|:80... connected.\nHTTP request sent, 
+11:50:10 - [ERROR] awaiting response... 404 Not Found\n2016-10-13 14:43:04 ERROR 404: Not 
+11:50:10 - [ERROR] Found.\n\nmv: cannot stat glusterfs-epel.repo: No such file or 
+11:50:10 - [ERROR] directory\nError: Package: nettle-3.2-2.el6.x86_64 (epel)\n           
+11:50:10 - [ERROR] Requires: libgmp.so.3()(64bit)\nError: Package: 
+11:50:10 - [ERROR] libstoragemgmt-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
+11:50:10 - [ERROR] libudev.so.0()(64bit)\nError: Package: 
+11:50:10 - [ERROR] libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
+11:50:10 - [ERROR] python(abi) = 2.6\n           Removing: python-2.7.5-34.el7.x86_64 
+11:50:10 - [ERROR] (@anaconda)\n               python(abi) = 2.7\n               python(abi) = 
+11:50:10 - [ERROR] 2.7\n           Updated By: python-2.7.5-39.el7_2.x86_64 (updates)\n           
+11:50:10 - [ERROR]     python(abi) = 2.7\n               python(abi) = 2.7\n           Available: 
+11:50:10 - [ERROR] python-2.7.5-38.el7_2.x86_64 (updates)\n               python(abi) = 2.7\n     
+11:50:10 - [ERROR]           python(abi) = 2.7\nError: Package: libstoragemgmt-1.3.2-1.el6.x86_64 
+11:50:10 - [ERROR] (epel)\n           Requires: libyajl.so.1()(64bit)\nError: Package: 
+11:50:10 - [ERROR] libstoragemgmt-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
+11:50:10 - [ERROR] libconfig.so.8()(64bit)\nError: Package: 
+11:50:10 - [ERROR] libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
+11:50:10 - [ERROR] libpython2.6.so.1.0()(64bit)\nError: Package: 
+11:50:10 - [ERROR] libstoragemgmt-python-1.3.2-1.el6.noarch (epel)\n           Requires: 
+11:50:10 - [ERROR] python(abi) = 2.6\n           Removing: python-2.7.5-34.el7.x86_64 
+11:50:10 - [ERROR] (@anaconda)\n               python(abi) = 2.7\n               python(abi) = 
+11:50:10 - [ERROR] 2.7\n           Updated By: python-2.7.5-39.el7_2.x86_64 (updates)\n           
+11:50:10 - [ERROR]     python(abi) = 2.7\n               python(abi) = 2.7\n           Available: 
+11:50:10 - [ERROR] python-2.7.5-38.el7_2.x86_64 (updates)\n               python(abi) = 2.7\n     
+11:50:10 - [ERROR]           python(abi) = 2.7\nError: Package: 
+11:50:10 - [ERROR] libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
+11:50:10 - [ERROR] libudev.so.0()(64bit)\nError: Package: 
+11:50:10 - [ERROR] libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)\n           Requires: 
+11:50:10 - [ERROR] libyajl.so.1()(64bit)\nError: Package: gnutls-3.3.8-14.el7_2.x86_64 
+11:50:10 - [ERROR] (@CentOS-Updates)\n           Requires: libnettle.so.4()(64bit)\n           
+11:50:10 - [ERROR] Removing: nettle-2.7.1-4.el7.x86_64 (@anaconda)\n               
+11:50:10 - [ERROR] libnettle.so.4()(64bit)\n           Updated By: nettle-3.2-2.el6.x86_64 
+11:50:10 - [ERROR] (epel)\n              ~libnettle.so.6()(64bit)\nError: Package: 
+11:50:10 - [ERROR] gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)\n           Requires: 
+11:50:10 - [ERROR] libhogweed.so.2()(64bit)\n           Removing: nettle-2.7.1-4.el7.x86_64 
+11:50:10 - [ERROR] (@anaconda)\n               libhogweed.so.2()(64bit)\n           Updated By: 
+11:50:10 - [ERROR] nettle-3.2-2.el6.x86_64 (epel)\n              
+11:50:10 - [ERROR] ~libhogweed.so.4()(64bit)\nWarning: RPMDB altered outside of 
+11:50:10 - [ERROR] yum.\nazuregfs.sh: line 268: /etc/init.d/glusterd: No such file or 
+11:50:10 - [ERROR] directory\nls: cannot access /datadrive/brick: No such file or 
+11:50:10 - [ERROR] directory\n\n\"."
+11:50:10 - [ERROR]       }
+11:50:10 - [ERROR]     ]
+11:50:10 - [ERROR]   }
+11:50:10 - [ERROR] }'
+11:50:10 - [ERROR] No C:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_bui
+11:50:10 - [ERROR] ld2\moodleazure-m\Scripts\Deploy-AzureResourceGroup.ps1:98 caractere:1
+11:50:10 - [ERROR] + New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFil ...
+11:50:10 - [ERROR] + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+11:50:10 - [ERROR]     + CategoryInfo          : NotSpecified: (:) [New-AzureRmResourceGroupDeplo 
+11:50:10 - [ERROR]    yment], Exception
+11:50:10 - [ERROR]     + FullyQualifiedErrorId : Microsoft.Azure.Commands.ResourceManager.Cmdlets 
+11:50:10 - [ERROR]    .Implementation.NewAzureResourceGroupDeploymentCmdlet
+11:50:10 - [ERROR]  
+11:50:10 - [ERROR] New-AzureRmResourceGroupDeployment : 11:50:10 - VM has reported a failure when 
+11:50:10 - [ERROR] processing extension 'setupGluster'. Error message: "Script returned an error.
+11:50:10 - [ERROR] ---stdout---
+11:50:10 - [ERROR] nparse for package: glusterfs-libs-3.7.1-16.0.1.el7.centos.x86_64
+11:50:10 - [ERROR] --> Running transaction check
+11:50:10 - [ERROR] ---> Package rsyslog-mmjsonparse.x86_64 0:7.4.7-12.el7 will be installed
+11:50:10 - [ERROR] --> Finished Dependency Resolution
+11:50:10 - [ERROR] 
+11:50:10 - [ERROR] Dependencies Resolved
+11:50:10 - [ERROR] 
+11:50:10 - [ERROR] ===============================================================================
+11:50:10 - [ERROR] =
+11:50:10 - [ERROR]  Package                    Arch     Version                    Repository
+11:50:10 - [ERROR]                                                                            Size
+11:50:10 - [ERROR] ===============================================================================
+11:50:10 - [ERROR] =
+11:50:10 - [ERROR] Installing:
+11:50:10 - [ERROR]  glusterfs                  x86_64   3.7.1-16.0.1.el7.centos    updates   422 k
+11:50:10 - [ERROR]  glusterfs-cli              x86_64   3.7.1-16.0.1.el7.centos    updates   153 k
+11:50:10 - [ERROR]  glusterfs-fuse             x86_64   3.7.1-16.0.1.el7.centos    updates   107 k
+11:50:10 - [ERROR] Installing for dependencies:
+11:50:10 - [ERROR]  glusterfs-client-xlators   x86_64   3.7.1-16.0.1.el7.centos    updates   732 k
+11:50:10 - [ERROR]  glusterfs-libs             x86_64   3.7.1-16.0.1.el7.centos    updates   322 k
+11:50:10 - [ERROR]  rsyslog-mmjsonparse        x86_64   7.4.7-12.el7               base       29 k
+11:50:10 - [ERROR] 
+11:50:10 - [ERROR] Transaction Summary
+11:50:10 - [ERROR] ===============================================================================
+11:50:10 - [ERROR] =
+11:50:10 - [ERROR] Install  3 Packages (+3 Dependent packages)
+11:50:10 - [ERROR] 
+11:50:10 - [ERROR] Total download size: 1.7 M
+11:50:10 - [ERROR] Installed size: 6.6 M
+11:50:10 - [ERROR] Downloading packages:
+11:50:10 - [ERROR] -------------------------------------------------------------------------------
+11:50:10 - [ERROR] -
+11:50:10 - [ERROR] Total                                              2.8 MB/s | 1.7 MB  00:00    
+11:50:10 - [ERROR]  
+11:50:10 - [ERROR] Running transaction check
+11:50:10 - [ERROR] Running transaction test
+11:50:10 - [ERROR] Transaction test succeeded
+11:50:10 - [ERROR] Running transaction
+11:50:10 - [ERROR]   Installing : rsyslog-mmjsonparse-7.4.7-12.el7.x86_64                      
+11:50:10 - [ERROR] 1/6 
+11:50:10 - [ERROR]   Installing : glusterfs-libs-3.7.1-16.0.1.el7.centos.x86_64                
+11:50:10 - [ERROR] 2/6 
+11:50:10 - [ERROR]   Installing : glusterfs-3.7.1-16.0.1.el7.centos.x86_64                     
+11:50:10 - [ERROR] 3/6 
+11:50:10 - [ERROR]   Installing : glusterfs-client-xlators-3.7.1-16.0.1.el7.centos.x86_64      
+11:50:10 - [ERROR] 4/6 
+11:50:10 - [ERROR]   Installing : glusterfs-fuse-3.7.1-16.0.1.el7.centos.x86_64                
+11:50:10 - [ERROR] 5/6 
+11:50:10 - [ERROR]   Installing : glusterfs-cli-3.7.1-16.0.1.el7.centos.x86_64                 
+11:50:10 - [ERROR] 6/6 
+11:50:10 - [ERROR]   Verifying  : glusterfs-3.7.1-16.0.1.el7.centos.x86_64                     
+11:50:10 - [ERROR] 1/6 
+11:50:10 - [ERROR]   Verifying  : rsyslog-mmjsonparse-7.4.7-12.el7.x86_64                      
+11:50:10 - [ERROR] 2/6 
+11:50:10 - [ERROR]   Verifying  : glusterfs-cli-3.7.1-16.0.1.el7.centos.x86_64                 
+11:50:10 - [ERROR] 3/6 
+11:50:10 - [ERROR]   Verifying  : glusterfs-client-xlators-3.7.1-16.0.1.el7.centos.x86_64      
+11:50:10 - [ERROR] 4/6 
+11:50:10 - [ERROR]   Verifying  : glusterfs-libs-3.7.1-16.0.1.el7.centos.x86_64                
+11:50:10 - [ERROR] 5/6 
+11:50:10 - [ERROR]   Verifying  : glusterfs-fuse-3.7.1-16.0.1.el7.centos.x86_64                
+11:50:10 - [ERROR] 6/6 
+11:50:10 - [ERROR] 
+11:50:10 - [ERROR] Installed:
+11:50:10 - [ERROR]   glusterfs.x86_64 0:3.7.1-16.0.1.el7.centos                                   
+11:50:10 - [ERROR]  
+11:50:10 - [ERROR]   glusterfs-cli.x86_64 0:3.7.1-16.0.1.el7.centos                               
+11:50:10 - [ERROR]  
+11:50:10 - [ERROR]   glusterfs-fuse.x86_64 0:3.7.1-16.0.1.el7.centos                              
+11:50:10 - [ERROR]  
+11:50:10 - [ERROR] 
+11:50:10 - [ERROR] Dependency Installed:
+11:50:10 - [ERROR]   glusterfs-client-xlators.x86_64 0:3.7.1-16.0.1.el7.centos                    
+11:50:10 - [ERROR]  
+11:50:10 - [ERROR]   glusterfs-libs.x86_64 0:3.7.1-16.0.1.el7.centos                              
+11:50:10 - [ERROR]  
+11:50:10 - [ERROR]   rsyslog-mmjsonparse.x86_64 0:7.4.7-12.el7                                    
+11:50:10 - [ERROR]  
+11:50:10 - [ERROR] 
+11:50:10 - [ERROR] Complete!
+11:50:10 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer status gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer status gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer status gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer status gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer status gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer status gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer status gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer status gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer status gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer probe gfsazmooclusvm0 failed
+11:50:10 - [ERROR] gluster peer status gfsazmooclusvm0 failed
+11:50:10 - [ERROR] Connection failed. Please check if gluster daemon is operational.
+11:50:10 - [ERROR] Connection failed. Please check if gluster daemon is operational.
+11:50:10 - [ERROR] Connection failed. Please check if gluster daemon is operational.
+11:50:10 - [ERROR] 
+11:50:10 - [ERROR] ---errout---
+11:50:10 - [ERROR] thon(abi) = 2.7
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]            Updated By: python-2.7.5-39.el7_2.x86_64 (updates)
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]            Available: python-2.7.5-38.el7_2.x86_64 (updates)
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR] Error: Package: libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)
+11:50:10 - [ERROR]            Requires: libudev.so.0()(64bit)
+11:50:10 - [ERROR] Error: Package: libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)
+11:50:10 - [ERROR]            Requires: libyajl.so.1()(64bit)
+11:50:10 - [ERROR] Error: Package: gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)
+11:50:10 - [ERROR]            Requires: libnettle.so.4()(64bit)
+11:50:10 - [ERROR]            Removing: nettle-2.7.1-4.el7.x86_64 (@anaconda)
+11:50:10 - [ERROR]                libnettle.so.4()(64bit)
+11:50:10 - [ERROR]            Updated By: nettle-3.2-2.el6.x86_64 (epel)
+11:50:10 - [ERROR]               ~libnettle.so.6()(64bit)
+11:50:10 - [ERROR] Error: Package: gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)
+11:50:10 - [ERROR]            Requires: libhogweed.so.2()(64bit)
+11:50:10 - [ERROR]            Removing: nettle-2.7.1-4.el7.x86_64 (@anaconda)
+11:50:10 - [ERROR]                libhogweed.so.2()(64bit)
+11:50:10 - [ERROR]            Updated By: nettle-3.2-2.el6.x86_64 (epel)
+11:50:10 - [ERROR]               ~libhogweed.so.4()(64bit)
+11:50:10 - [ERROR] --2016-10-13 14:43:04--  http://download.gluster.org/pub/gluster/glusterfs/LATE
+11:50:10 - [ERROR] ST/EPEL.repo/glusterfs-epel.repo
+11:50:10 - [ERROR] Resolving download.gluster.org (download.gluster.org)... 23.253.208.221, 
+11:50:10 - [ERROR] 2001:4801:7824:104:be76:4eff:fe10:23d8
+11:50:10 - [ERROR] Connecting to download.gluster.org 
+11:50:10 - [ERROR] (download.gluster.org)|23.253.208.221|:80... connected.
+11:50:10 - [ERROR] HTTP request sent, awaiting response... 404 Not Found
+11:50:10 - [ERROR] 2016-10-13 14:43:04 ERROR 404: Not Found.
+11:50:10 - [ERROR] 
+11:50:10 - [ERROR] mv: cannot stat glusterfs-epel.repo: No such file or directory
+11:50:10 - [ERROR] Error: Package: nettle-3.2-2.el6.x86_64 (epel)
+11:50:10 - [ERROR]            Requires: libgmp.so.3()(64bit)
+11:50:10 - [ERROR] Error: Package: libstoragemgmt-1.3.2-1.el6.x86_64 (epel)
+11:50:10 - [ERROR]            Requires: libudev.so.0()(64bit)
+11:50:10 - [ERROR] Error: Package: libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)
+11:50:10 - [ERROR]            Requires: python(abi) = 2.6
+11:50:10 - [ERROR]            Removing: python-2.7.5-34.el7.x86_64 (@anaconda)
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]            Updated By: python-2.7.5-39.el7_2.x86_64 (updates)
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]            Available: python-2.7.5-38.el7_2.x86_64 (updates)
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR] Error: Package: libstoragemgmt-1.3.2-1.el6.x86_64 (epel)
+11:50:10 - [ERROR]            Requires: libyajl.so.1()(64bit)
+11:50:10 - [ERROR] Error: Package: libstoragemgmt-1.3.2-1.el6.x86_64 (epel)
+11:50:10 - [ERROR]            Requires: libconfig.so.8()(64bit)
+11:50:10 - [ERROR] Error: Package: libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)
+11:50:10 - [ERROR]            Requires: libpython2.6.so.1.0()(64bit)
+11:50:10 - [ERROR] Error: Package: libstoragemgmt-python-1.3.2-1.el6.noarch (epel)
+11:50:10 - [ERROR]            Requires: python(abi) = 2.6
+11:50:10 - [ERROR]            Removing: python-2.7.5-34.el7.x86_64 (@anaconda)
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]            Updated By: python-2.7.5-39.el7_2.x86_64 (updates)
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]            Available: python-2.7.5-38.el7_2.x86_64 (updates)
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR]                python(abi) = 2.7
+11:50:10 - [ERROR] Error: Package: libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)
+11:50:10 - [ERROR]            Requires: libudev.so.0()(64bit)
+11:50:10 - [ERROR] Error: Package: libstoragemgmt-python-clibs-1.3.2-1.el6.x86_64 (epel)
+11:50:10 - [ERROR]            Requires: libyajl.so.1()(64bit)
+11:50:10 - [ERROR] Error: Package: gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)
+11:50:10 - [ERROR]            Requires: libnettle.so.4()(64bit)
+11:50:10 - [ERROR]            Removing: nettle-2.7.1-4.el7.x86_64 (@anaconda)
+11:50:10 - [ERROR]                libnettle.so.4()(64bit)
+11:50:10 - [ERROR]            Updated By: nettle-3.2-2.el6.x86_64 (epel)
+11:50:10 - [ERROR]               ~libnettle.so.6()(64bit)
+11:50:10 - [ERROR] Error: Package: gnutls-3.3.8-14.el7_2.x86_64 (@CentOS-Updates)
+11:50:10 - [ERROR]            Requires: libhogweed.so.2()(64bit)
+11:50:10 - [ERROR]            Removing: nettle-2.7.1-4.el7.x86_64 (@anaconda)
+11:50:10 - [ERROR]                libhogweed.so.2()(64bit)
+11:50:10 - [ERROR]            Updated By: nettle-3.2-2.el6.x86_64 (epel)
+11:50:10 - [ERROR]               ~libhogweed.so.4()(64bit)
+11:50:10 - [ERROR] Warning: RPMDB altered outside of yum.
+11:50:10 - [ERROR] azuregfs.sh: line 268: /etc/init.d/glusterd: No such file or directory
+11:50:10 - [ERROR] ls: cannot access /datadrive/brick: No such file or directory
+11:50:10 - [ERROR] 
+11:50:10 - [ERROR] ".
+11:50:10 - [ERROR] No C:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_bui
+11:50:10 - [ERROR] ld2\moodleazure-m\Scripts\Deploy-AzureResourceGroup.ps1:98 caractere:1
+11:50:10 - [ERROR] + New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFil ...
+11:50:10 - [ERROR] + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+11:50:10 - [ERROR]     + CategoryInfo          : NotSpecified: (:) [New-AzureRmResourceGroupDeplo 
+11:50:10 - [ERROR]    yment], Exception
+11:50:10 - [ERROR]     + FullyQualifiedErrorId : Microsoft.Azure.Commands.ResourceManager.Cmdlets 
+11:50:10 - [ERROR]    .Implementation.NewAzureResourceGroupDeploymentCmdlet
+11:50:10 - [ERROR]  
+11:50:10 - [VERBOSE] 11:50:10 - Checking deployment status in 60 seconds
+11:51:11 - [VERBOSE] 11:51:11 - Checking deployment status in 60 seconds
+11:52:11 - [VERBOSE] 11:52:11 - Checking deployment status in 60 seconds
+11:53:11 - [VERBOSE] 11:53:11 - Checking deployment status in 60 seconds
+11:54:11 - [ERROR] New-AzureRmResourceGroupDeployment : 11:54:11 - Resource 
+11:54:11 - [ERROR] Microsoft.Compute/virtualMachineScaleSets 'webfarm' failed with message '{
+11:54:11 - [ERROR]   "status": "Failed",
+11:54:11 - [ERROR]   "error": {
+11:54:11 - [ERROR]     "code": "ResourceDeploymentFailure",
+11:54:11 - [ERROR]     "message": "The resource operation completed with terminal provisioning 
+11:54:11 - [ERROR] state 'Failed'.",
+11:54:11 - [ERROR]     "details": [
+11:54:11 - [ERROR]       {
+11:54:11 - [ERROR]         "code": "VMExtensionProvisioningError",
+11:54:11 - [ERROR]         "message": "VM has reported a failure when processing extension 
+11:54:11 - [ERROR] 'setup_moodle'. Error message: \"Enable failed: Failed with error: Failed to 
+11:54:11 - [ERROR] download external file with uri: https://raw.githubusercontent.com/ftvello/Mood
+11:54:11 - [ERROR] leAzure-M/master/Scripts/setup_moodle.sh with error HTTP Error 404: Not Found, 
+11:54:11 - [ERROR] Traceback (most recent call last):\n  File \"/var/lib/waagent/Microsoft.OSTCExt
+11:54:11 - [ERROR] ensions.CustomScriptForLinux-1.5.2.1/customscript.py\", line 71, in main\n    
+11:54:11 - [ERROR] daemon(hutil)\n  File \"/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptF
+11:54:11 - [ERROR] orLinux-1.5.2.1/customscript.py\", line 269, in daemon\n    retry_count = 
+11:54:11 - [ERROR] download_files_with_retry(hutil, retry_count, wait)\n  File \"/var/lib/waagent/
+11:54:11 - [ERROR] Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/customscript.py\", line 
+11:54:11 - [ERROR] 110, in download_files_with_retry\n    download_files(hutil)\n  File \"/var/lib
+11:54:11 - [ERROR] /waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/customscript.py\
+11:54:11 - [ERROR] ", line 215, in download_files\n    download_external_files(blob_uris, cmd, 
+11:54:11 - [ERROR] hutil)\n  File \"/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux
+11:54:11 - [ERROR] -1.5.2.1/customscript.py\", line 349, in download_external_files\n    
+11:54:11 - [ERROR] download_external_file(uri, command, hutil)\n  File \"/var/lib/waagent/Microsof
+11:54:11 - [ERROR] t.OSTCExtensions.CustomScriptForLinux-1.5.2.1/customscript.py\", line 366, in 
+11:54:11 - [ERROR] download_external_file\n    raise Exception(error_msg)\nException: Failed to 
+11:54:11 - [ERROR] download external file with uri: https://raw.githubusercontent.com/ftvello/Mood
+11:54:11 - [ERROR] leAzure-M/master/Scripts/setup_moodle.sh with error HTTP Error 404: Not 
+11:54:11 - [ERROR] Found\n\"."
+11:54:11 - [ERROR]       }
+11:54:11 - [ERROR]     ]
+11:54:11 - [ERROR]   }
+11:54:11 - [ERROR] }'
+11:54:11 - [ERROR] No C:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_bui
+11:54:11 - [ERROR] ld2\moodleazure-m\Scripts\Deploy-AzureResourceGroup.ps1:98 caractere:1
+11:54:11 - [ERROR] + New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFil ...
+11:54:11 - [ERROR] + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+11:54:11 - [ERROR]     + CategoryInfo          : NotSpecified: (:) [New-AzureRmResourceGroupDeplo 
+11:54:11 - [ERROR]    yment], Exception
+11:54:11 - [ERROR]     + FullyQualifiedErrorId : Microsoft.Azure.Commands.ResourceManager.Cmdlets 
+11:54:11 - [ERROR]    .Implementation.NewAzureResourceGroupDeploymentCmdlet
+11:54:11 - [ERROR]  
+11:54:11 - [ERROR] New-AzureRmResourceGroupDeployment : 11:54:11 - VM has reported a failure when 
+11:54:11 - [ERROR] processing extension 'setup_moodle'. Error message: "Enable failed: Failed 
+11:54:11 - [ERROR] with error: Failed to download external file with uri: https://raw.githubuserco
+11:54:11 - [ERROR] ntent.com/ftvello/MoodleAzure-M/master/Scripts/setup_moodle.sh with error HTTP 
+11:54:11 - [ERROR] Error 404: Not Found, Traceback (most recent call last):
+11:54:11 - [ERROR]   File "/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/
+11:54:11 - [ERROR] customscript.py", line 71, in main
+11:54:11 - [ERROR]     daemon(hutil)
+11:54:11 - [ERROR]   File "/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/
+11:54:11 - [ERROR] customscript.py", line 269, in daemon
+11:54:11 - [ERROR]     retry_count = download_files_with_retry(hutil, retry_count, wait)
+11:54:11 - [ERROR]   File "/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/
+11:54:11 - [ERROR] customscript.py", line 110, in download_files_with_retry
+11:54:11 - [ERROR]     download_files(hutil)
+11:54:11 - [ERROR]   File "/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/
+11:54:11 - [ERROR] customscript.py", line 215, in download_files
+11:54:11 - [ERROR]     download_external_files(blob_uris, cmd, hutil)
+11:54:11 - [ERROR]   File "/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/
+11:54:11 - [ERROR] customscript.py", line 349, in download_external_files
+11:54:11 - [ERROR]     download_external_file(uri, command, hutil)
+11:54:11 - [ERROR]   File "/var/lib/waagent/Microsoft.OSTCExtensions.CustomScriptForLinux-1.5.2.1/
+11:54:11 - [ERROR] customscript.py", line 366, in download_external_file
+11:54:11 - [ERROR]     raise Exception(error_msg)
+11:54:11 - [ERROR] Exception: Failed to download external file with uri: https://raw.githubusercon
+11:54:11 - [ERROR] tent.com/ftvello/MoodleAzure-M/master/Scripts/setup_moodle.sh with error HTTP 
+11:54:11 - [ERROR] Error 404: Not Found
+11:54:11 - [ERROR] ".
+11:54:11 - [ERROR] No C:\users\fabio.vello\source\repos\moodleazure_itocre\moodleazure_cloud01_bui
+11:54:11 - [ERROR] ld2\moodleazure-m\Scripts\Deploy-AzureResourceGroup.ps1:98 caractere:1
+11:54:11 - [ERROR] + New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFil ...
+11:54:11 - [ERROR] + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+11:54:11 - [ERROR]     + CategoryInfo          : NotSpecified: (:) [New-AzureRmResourceGroupDeplo 
+11:54:11 - [ERROR]    yment], Exception
+11:54:11 - [ERROR]     + FullyQualifiedErrorId : Microsoft.Azure.Commands.ResourceManager.Cmdlets 
+11:54:11 - [ERROR]    .Implementation.NewAzureResourceGroupDeploymentCmdlet
+11:54:11 - [ERROR]  
+11:54:12 - [VERBOSE] 11:54:12 - Checking deployment status in 60 seconds
+11:55:12 - [VERBOSE] 11:55:12 - Checking deployment status in 60 seconds
+11:56:12 - [VERBOSE] 11:56:12 - Checking deployment status in 60 seconds
+11:57:12 - [VERBOSE] 11:57:12 - Checking deployment status in 60 seconds
+11:58:12 - [VERBOSE] 11:58:12 - Checking deployment status in 60 seconds
+11:59:13 - [VERBOSE] 11:59:13 - Checking deployment status in 60 seconds
+12:00:13 - [VERBOSE] 12:00:13 - Checking deployment status in 60 seconds
