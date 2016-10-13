@@ -1,13 +1,13 @@
 #!/bin/bash
-## Script Install L4mP S3rV3r + M00dl3 3.0.6 by Sl4cK / L0g4N
 
-systemctl stop firewalld
+glusterNOde=$1
+glusterVolume=$2
 
-systemctl disable firewalld
+# GLuster CLient
 
-sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
+wget -P /etc/yum.repos.d http://download.gluster.org/pub/gluster/glusterfs/LATEST/CentOS/glusterfs-epel.repo
 
-# Repos Community
+yum -y install glusterfs glusterfs-fuse mysql-client git
 
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-8.noarch.rpm
 
@@ -17,54 +17,41 @@ yum install yum-utils.noarch -y
 
 yum-config-manager --save --setopt=extras.skip_if_unavailable=true
 
-
-# Install L4mP
 yum -y install httpd php php-mysql php-iconv php-mbstring php-curl php-openssl php-tokenizer php-soap php-ctype php-zip php-gd php-simplexml php-spl php-pcre php-dom php-xml php-intl php-json php-ldap php-pecl-apc vim wget unzip libjpeg-turbo-devel.x86_64 libpng.x86_64 libpng-devel.x86_64 giflib.x86_64 giflib.x86_64 gd.x86_64 libXpm.x86_64 freetype-devel.x86_64 libxml2.x86_64 libxml2-devel.x86_64 mingw32-win-iconv-static.noarch libXpm-devel libjpeg-devel libcurl-devel.x86_64  ibmcrypt libmcrypt-devel libicu-devel php-mbstring php-mcrypt gd gd-devel php-soap graphviz aspell php-pspell php-ldap php-xmlrpc php-gd php-mysql php-intl php-opcache
 
-systemctl enable httpd
+mkdir -p /moodle
 
-systemctl start  httpd
+chown apache /moodle
 
-cd /var/www/html
+chmod 770 /moodle
 
-# Install M00dL3
+# mount gluster files system
+echo -e 'mount -t glusterfs '$glusterNode':/'$glusterVolume' /moodle' > /tmp/mount.log 
+mount -t glusterfs $glusterNode:/$glusterVolume /moodle
 
-wget --no-check-certificate https://sourceforge.net/projects/moodle/files/Moodle/stable30/moodle-3.0.6.zip
+# Enable VirtualHost
 
-unzip moodle-3.0.6.zip
+mkdir /etc/httpd/sites-available
 
-chmod -R 755 /var/www/html/moodle
+mkdir /etc/httpd/sites-enabled
 
-chown -R apache:apache /var/www/html/moodle
+echo -e "\n\rUpdating PHP and site configuration\n\r" 
+    #update virtual site configuration 
+    echo -e '
+    <VirtualHost *:80>
+            #ServerName www.example.com
+            ServerAdmin webmaster@localhost
+            DocumentRoot /moodle/html/moodle
+            #LogLevel info ssl:warn
+            ErrorLog ${APACHE_LOG_DIR}/error.log
+            CustomLog ${APACHE_LOG_DIR}/access.log combined
+            #Include conf-available/serve-cgi-bin.conf
+    </VirtualHost>' > /etc/httpd/sites-enabled/eadunibr.conf
 
-chmod -R 755 /var/www/html/moodle
 
-cd /var/www/html
+sudo ln -s /etc/httpd/sites-available/eadunibr.conf /etc/httpd/sites-enabled/eadunibr.conf
 
-# Install Plugin Office
-wget --no-check-certificate https://github.com/MSOpenTech/o365-moodle/archive/MOODLE_30_STABLE.zip    
-
-unzip MOODLE_30_STABLE.zip
-
-cp -r o365-moodle-MOODLE_30_STABLE/* moodle
-
-rm -rf o365-moodle-MOODLE_30_STABLE
-
-rm MOODLE_30_STABLE.zip
-
-cd /var/www/
-
-mkdir moodledata
-
-chmod -R 755 /var/www/moodledata
-
-chown -R apache:apache /var/www/moodledata
-
-apachectl restart
-
-systemctl restart httpd
-
-yum update -y
+echo "IncludeOptional sites-enabled/*.conf" >> /etc/httpd/conf/httpd.conf
 
 yum  -y install php-fpm
 
@@ -2308,7 +2295,7 @@ events.mechanism = epoll
 
 ; See /etc/php-fpm.d/*.conf
 EOF
-#!/bin/bash
+
 mv /etc/php.d/opcache.ini /BKP-HTTP/PHP
 
 cat >>/etc/php.d/opcache.ini <<EOF
@@ -2408,7 +2395,6 @@ opcache.blacklist_filename=/etc/php.d/opcache*.blacklist
 ;opcache.protect_memory=0
 EOF
 
-#!/bin/bash
 mv /etc/php.d/apcu.ini /BKP-HTTP/PHP
 
 cat >> /etc/php.d/apcu.ini <<EOF
@@ -2545,6 +2531,7 @@ cat >> /etc/httpd/conf.modules.d/01-cgi.conf <<EOF
    MaxRequestWorkers       1000
    MaxConnectionsPerChild     0
 </IfModule>
+EOF
 
 cat >> /etc/httpd/conf.modules.d/00-proxy.conf <<EOF
 # This file configures all the proxy modules:
@@ -2644,5 +2631,8 @@ LoadModule unixd_module modules/mod_unixd.so
 #LoadModule sed_module modules/mod_sed.so
 #LoadModule speling_module modules/mod_speling.so
 EOF
-#sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
+
+# restart Apache
+echo -e "\n\rRestarting Apache2 httpd server\n\r"
+systemctl restart httpd 
 
