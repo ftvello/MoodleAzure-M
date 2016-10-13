@@ -26,8 +26,8 @@ chown apache /moodle
 chmod 770 /moodle
 
 # mount gluster files system
-echo -e 'mount -t glusterfs '$glusterNode':/'$glusterVolume' /moodle' > /tmp/mount.log 
-mount -t glusterfs $glusterNode:/$glusterVolume /moodle
+#echo -e 'mount -t glusterfs '$glusterNode':/'$glusterVolume' /moodle' > /tmp/mount.log 
+#mount -t glusterfs $glusterNode:/$glusterVolume /moodle
 
 # Enable VirtualHost
 
