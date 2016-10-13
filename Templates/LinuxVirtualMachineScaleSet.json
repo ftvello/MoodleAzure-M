@@ -438,7 +438,7 @@
                     "dataDisks": [
                         {
                             "name": "datadisk1",
-                            "diskSizeGB": "40",
+                            "diskSizeGB": "80",
                             "lun": 0,
                             "vhd": {
                                 "uri": "[concat('http://', variables('storageAcctName'), copyindex(),'.blob.core.windows.net/vhds/gfs', variables('vmName'), copyIndex(), 'datadisk1.vhd')]"
@@ -447,7 +447,7 @@
                         },
                         {
                             "name": "datadisk2",
-                            "diskSizeGB": "40",
+                            "diskSizeGB": "80",
                             "lun": 1,
                             "vhd": {
                                 "uri": "[concat('http://', variables('storageAcctName'), copyindex(),'.blob.core.windows.net/vhds/gfs', variables('vmName'), copyIndex(), 'datadisk2.vhd')]"
