@@ -880,7 +880,7 @@
                                     "fileUris": [
                                       "https://unicastelo.file.core.windows.net/fileserver/scripts/setup_moodle.sh"
                                     ],
-                                    "commandToExecute": "sh setup_moodle.sh"
+                                    "commandToExecute": "bash setup_moodle.sh"
                                   },
                                  "protectedSettings": {
                                     "storageAccountName": "Unicastelo",
