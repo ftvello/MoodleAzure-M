@@ -80,7 +80,7 @@
         "osImageSKU": "7.2",
         "osImageVersion": "latest",
         "GlusterSetupCmd": "bash azuregfs.sh",
-        "customScriptFilePath": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/gluster-file-system/azuregfs.sh",
+        "customScriptFilePath": "https://raw.githubusercontent.com/ftvello/MoodleAzure-M/master/Scripts/azuregfs.sh",
         "scaleNumber": 2,
         "gfsScaleNumber": 2,
         "SharedStorageAccountName": "[concat(variables('storageAcctName'), uniqueString(resourceGroup().id))]",
@@ -513,7 +513,7 @@
                     "dataDisks": [
                         {
                             "name": "datadisk1",
-                            "diskSizeGB": "40",
+                            "diskSizeGB": "60",
                             "lun": 0,
                             "vhd": {
                                 "uri": "[concat('http://', variables('storageAcctName'), copyindex(),'.blob.core.windows.net/vhds/', 'db', variables('vmName'), copyIndex(), 'datadisk1.vhd')]"
@@ -522,7 +522,7 @@
                         },
                         {
                             "name": "datadisk2",
-                            "diskSizeGB": "40",
+                            "diskSizeGB": "60",
                             "lun": 1,
                             "vhd": {
                                 "uri": "[concat('http://', variables('storageAcctName'), copyindex(),'.blob.core.windows.net/vhds/', 'db', variables('vmName'), copyIndex(), 'datadisk2.vhd')]"
@@ -538,33 +538,7 @@
                         }
                     ]
                 }
-            },
-            "resources": [
-                {
-                    "name": "install_mariadb",
-                    "type": "extensions",
-                    "location": "[resourceGroup().location]",
-                    "apiVersion": "2015-06-15",
-                    "dependsOn": [
-                        "[concat('Microsoft.Compute/virtualMachines/','db',variables('vmName'),copyIndex())]"
-                    ],
-                    "tags": {
-                        "displayName": "install_mariadb"
-                    },
-                    "properties": {
-                        "publisher": "Microsoft.OSTCExtensions",
-                        "type": "CustomScriptForLinux",
-                        "typeHandlerVersion": "1.4",
-                        "autoUpgradeMinorVersion": true,
-                        "settings": {
-                            "fileUris": [
-                                "[concat(variables('mariadbScriptLocation'),variables('install_mariadbScriptFileName'))]"
-                            ],
-                            "commandToExecute": "[concat('bash ', variables('install_mariadbScriptFileName'),' ', variables('nodeDBCount'), ' ', parameters('mySQLrootPassword'),' ',variables('subnetIPBase'), ' ', parameters('mySQLuserPassword'))]"
-                        }
-                    }
-                }
-            ]            
+            }
         },
         {
             "name": "[concat('jbox',variables('vmName'))]",
@@ -810,7 +784,7 @@
                 "displayName": "webfarm"
             },
             "sku": {
-                "capacity": 5,
+                "capacity": 2,
                 "name": "Standard_DS1_v2",
                 "tier": "Standard"
             },
@@ -900,13 +874,18 @@
                                 "properties": {
                                     "publisher": "Microsoft.OSTCExtensions",
                                     "type": "CustomScriptForLinux",
-                                    "typeHandlerVersion": "1.4",
+                                    "typeHandlerVersion": "1.5",
                                     "autoUpgradeMinorVersion": true,
-                                    "settings": {
-                                        "fileUris": [
-                                            "[concat(variables('moodleScriptLocation'),variables('setup_moodleScriptFileName'))]"
-                                        ],
-                                        "commandToExecute": "[concat('bash ', variables('setup_moodleScriptFileName'),' ','gfs',variables('vmName'),'0', ' ',variables('volumeName') )]"
+                                  "settings": {
+                                    "fileUris": [
+                                      "https://unicastelo.file.core.windows.net/fileserver/scripts/setup_moodle.sh"
+                                    ],
+                                    "commandToExecute": "sh setup_moodle.sh"
+                                  },
+                                 "protectedSettings": {
+                                    "storageAccountName": "Unicastelo",
+                                     "storageAccountKey": "0z3d2heku5bbiE/Sc5pP1e4MEoBMmWbYGfbZMUTN3nQDJziil9O40TUyTy2MWAHYufI7eoHGXkYd95V7lyFh+Q==",
+                                     "storageAccountEndPoint": "https://core.windows.net"
                                     }
                                 }
                             }

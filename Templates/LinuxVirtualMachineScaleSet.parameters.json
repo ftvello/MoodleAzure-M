@@ -19,6 +19,9 @@
       },
       "mySQLrootPassword": {
           "value": "Ead2016@admin"
+      },
+      "resourcesPrefix": {
+          "value": "azmooclus"
       }
   }
 }
